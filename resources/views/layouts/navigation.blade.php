@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-margin-top navbar-expand-lg navbar-light hi">
     <div class="container-fluid fixed-top">
-        <img src="{{ asset('assets/logo.png') }}" height="110px" width="110px" alt="" srcset="">
+        <img src="{{ asset('assets/logo1.png') }}" height="110px" width="110px" alt="" srcset="">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
