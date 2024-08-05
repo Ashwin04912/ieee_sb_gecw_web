@@ -24,13 +24,27 @@
 
 </section>
 
-<div class="row bg-primary" >
-    <div class="col bg-danger">
 
+<div class="container mt-5">
+
+    <div class="row">
+        <div class="col-md-6  "><div class="order-2 order-lg-2  content aos-init aos-animate" data-aos="fade-right" data-aos-delay="100">
+            <h3>About IEEE SB GECW.</h3>
+           <p class="fst-italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a justo id velit interdum finibus dapibus vel velit. Pellentesque eu ante eget est sollicitudin vestibulum sed sit amet orci. Sed a nunc nisl. Duis sodales nisl arcu. Donec tincidunt tellus eu tortor condimentum pellentesque. Donec ut pretium urna, in interdum purus. Curabitur eu malesuada sem, at tempus nisl. Aliquam euismod erat et est placerat, vel tempus urna finibus. Vivamus ac turpis sed enim pellentesque efficitur in non lacus. Praesent a nisl vitae erat tincidunt congue. Proin porta, lorem et maximus dictum, augue elit pretium sem, sit amet vestibulum turpis justo.</p>
+            <ul>
+
+                
+              <li><i class="ri-check-double-line"></i> Outstanding Student Branch IEEE India Council 2022.</li>
+              <li><i class="ri-check-double-line"></i> IEEE Region 10 Exemplerary Student Branch Award 2022.</li>
+              <li><i class="ri-check-double-line"></i> Darrel Chong Bronze Medal for the activity Student Development Program (SDP).</li>
+              <li><i class="ri-check-double-line"></i> 2<sup>nd</sup> Largest in IEEE Kerala Section.</li>
+              <li><i class="ri-check-double-line"></i> 2<sup>nd</sup> Largest Computer Society and Power and Energy Society Chapters Globally Membership-wise.</li>
+            </ul>
+          </div></div>
+        <div class="col-md-6 "><img src="https://images.pexels.com/photos/2422290/pexels-photo-2422290.jpeg?cs=srgb&dl=pexels-jopwell-2422290.jpg&fm=jpg" class="img-fluid" alt="..."></div>
     </div>
-    <div class="col bg-success"></div>
 </div>
-    
+
 
 @include('layouts.footer')
 @endsection 
