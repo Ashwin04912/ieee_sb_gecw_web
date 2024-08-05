@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/heroes/hero-5/assets/css/hero-5.css">
 <script src="https://unpkg.com/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
@@ -21,17 +20,18 @@
                 <li class="nav-item {{ Route::currentRouteName() == 'about.us' ? 'selected' : '' }}">
                     <a class="nav-link text-light" href="{{ route('about.us') }}">About Us</a>
                 </li>
+                
                 <li class="nav-item {{ Route::currentRouteName() == 'events' ? 'selected' : '' }}">
                     <a class="nav-link text-light" href="{{ route('events') }}">Events</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link text-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Execom
+                    <a class="nav-link dropdown-toggle data-bs-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                         Societies
                     </a>
-                    <ul class="dropdown-menu" style="background-color: transparent" >
-                        <li><a class="dropdown-item text-light"  style="background-color: transparent" href="#">Achievements</a></li>
-                        <li><a class="dropdown-item text-light"  style="background-color: transparent" href="#">Another action</a></li>
-                        <li><a class="dropdown-item text-light"  style="background-color: transparent" href="#">Something else here</a></li>
+                    <ul class="dropdown-menu" style="background-color: transparent;">
+                        <li><a class="dropdown-item text-light" style="background-color: transparent;" href="#">Computer Society</a></li>
+                        <li><a class="dropdown-item text-light" style="background-color: transparent;" href="#">Women In Engineering</a></li>
+                        <li><a class="dropdown-item text-light" style="background-color: transparent;" href="#">Something else here</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -39,7 +39,7 @@
                 </li>
                 <li class="nav-item dropdown"  >
                     <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Societies
+                        Execom
                     </a>
                     <ul class="dropdown-menu"  style="background-color: transparent">
                         <li><a class="dropdown-item  text-light"  style="background-color: transparent"  href="#">Computer Society</a></li>

@@ -23,6 +23,13 @@
 
 
 </section>
+
+<div class="row bg-primary" >
+    <div class="col bg-danger">
+
+    </div>
+    <div class="col bg-success"></div>
+</div>
     
 
 @include('layouts.footer')
