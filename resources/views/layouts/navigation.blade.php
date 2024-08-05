@@ -27,8 +27,8 @@
                         <li><a class="dropdown-item text-light" href="#">Something else here</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Achievements</a>
+                <li class="nav-item {{ Route::currentRouteName() == 'achievements' ? 'selected' : '' }}">
+                    <a class="nav-link text-light" href="{{ route('achievements') }}">Achievements</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -44,8 +44,8 @@
         </div>
     </div>
 </nav>
-    
-    
+
+
     <div class="container">
       <div class="row justify-content-md-center align-items-center">
         <div class="col-12 col-md-11 col-lg-9 col-xl-8 col-xxl-7">
@@ -59,6 +59,6 @@
         </div>
       </div>
     </div>
-  
+
 
 </section>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AchieveController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class , 'index'])->name('home');
 Route::get('/about-us',[AboutController::class, 'index' ])->name('about.us');
 Route::get('/events',[EventsController::class, 'index' ])->name('events');
+Route::get('/achievements',[AchieveController::class, 'index' ])->name('achievements');
