@@ -26,4 +26,8 @@
     opacity: 0.8;
 }
 
-/* footer */
+
+.container-fluid{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
