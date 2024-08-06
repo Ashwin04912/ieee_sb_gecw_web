@@ -22,15 +22,25 @@
         <button class="navbar-toggler m-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span>
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="1.5em" height="1.5em" viewBox="0 0 40 40">
-                    <path fill="#c2e8ff" d="M1.5 18.5H38.5V21.5H1.5z"></path><path fill="#7496c4" d="M38,19v2H2v-2H38 M39,18H1v4h38V18L39,18z"></path><path fill="#c2e8ff" d="M1.5 8.5H38.5V11.5H1.5z"></path><path fill="#7496c4" d="M38,9v2H2V9H38 M39,8H1v4h38V8L39,8z"></path><g><path fill="#c2e8ff" d="M1.5 28.5H38.5V31.5H1.5z"></path><path fill="#7496c4" d="M38,29v2H2v-2H38 M39,28H1v4h38V28L39,28z"></path></g>
-                    </svg>
-</span>
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="1.5em" height="1.5em"
+                    viewBox="0 0 40 40">
+                    <path fill="#c2e8ff" d="M1.5 18.5H38.5V21.5H1.5z"></path>
+                    <path fill="#7496c4" d="M38,19v2H2v-2H38 M39,18H1v4h38V18L39,18z"></path>
+                    <path fill="#c2e8ff" d="M1.5 8.5H38.5V11.5H1.5z"></path>
+                    <path fill="#7496c4" d="M38,9v2H2V9H38 M39,8H1v4h38V8L39,8z"></path>
+                    <g>
+                        <path fill="#c2e8ff" d="M1.5 28.5H38.5V31.5H1.5z"></path>
+                        <path fill="#7496c4" d="M38,29v2H2v-2H38 M39,28H1v4h38V28L39,28z"></path>
+                    </g>
+                </svg>
+            </span>
         </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"
+            style="background-color: transparent">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+                    style="background-color: red"></button>
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav ms-auto me-4">
