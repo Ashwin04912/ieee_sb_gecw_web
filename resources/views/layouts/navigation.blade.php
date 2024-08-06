@@ -87,7 +87,7 @@
 <script>
     $(window).scroll(function() {
         if ($(window).scrollTop() >= 100) {
-            $('#ScrollJq').css('background', 'black');
+            $('#ScrollJq').css('background', 'gray');
         } else {
             $('#ScrollJq').css('background', 'transparent');
         }
