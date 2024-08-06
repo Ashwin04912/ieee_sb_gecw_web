@@ -30,4 +30,10 @@
 .container-fluid{
     padding-left: 0px !important;
     padding-right: 0px !important;
+    margin-top: -16px !important;
+}
+
+.ScrollCss{
+    transition: 0.6;
+    opacity: .8;
 }

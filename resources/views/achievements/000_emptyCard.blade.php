@@ -3,7 +3,7 @@
     @endslot
 
     @slot('image')
-        {{ asset('assets/logo.png') }}
+        {{ asset('assets/images/logo.png') }}
     @endslot
 
     @slot('title')
