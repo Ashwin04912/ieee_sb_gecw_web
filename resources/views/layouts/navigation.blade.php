@@ -76,12 +76,32 @@
     </div>
 </nav>
 
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+
+
 <script>
-    $(window).scroll(function() {
-        if ($(window).scrollTop() >= 100) {
-            $('#ScrollJq').css('background', 'gray');
-        } else {
-            $('#ScrollJq').css('background', 'transparent');
-        }
+  $(window).scroll(function () {
+      if ($(window).scrollTop() >= 150) {
+          $('#ScrollJq').css('background', 'black');
+      } else {
+          $('#ScrollJq').css('background', 'transparent');
+      }
+  });
+
+    $(document).ready(function() {
+        $('a[href^="#"]').on('click', function(event) {
+            var target = $(this.getAttribute('href'));
+            if (target.length) {
+                event.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top
+                }, 1000); // The number 1000 is the duration of the scroll in milliseconds
+            }
+        });
     });
+
 </script>

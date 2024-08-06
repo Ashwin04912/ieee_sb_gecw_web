@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
-<section class="bsb-hero-5 bsb-overlay img-fluid  position-relative"
+<section class="bsb-hero-5 bsb-overlay img-fluid  position-relative home"
+
     style="background-image: url('{{ asset('assets/images/dummy-bg.jpg') }}'); height :104vh; background-attachment: fixed; background-size: cover">
 
 
@@ -15,7 +16,7 @@
                         way is to be kind. The second way is to be kind. The third way is to be kind.</span>
                 </p>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <button type="button" class="btn bsb-btn-2xl btn-outline-light">Get Started</button>
+                    <button type="button" onclick="$('.about_us')[0].focus()" class="btn bsb-btn-2xl btn-outline-light">Get Started</button>
                 </div>
             </div>
         </div>
@@ -25,7 +26,7 @@
 </section>
 
 
-<div class="container mt-5">
+<div class="container mt-5 about_us" tabindex="0">
 
     <div class="row">
         <div class="col-md-6  "><div class="order-2 order-lg-2  content aos-init aos-animate" data-aos="fade-right" data-aos-delay="100">
@@ -45,8 +46,30 @@
     </div>
 </div>
 
-<div class="col">
-    <h2 style="height: 500px"></h2>
+<div class="container">
+    <div class="row p-4 justify-content-center">
+        <div class="col-md-2 col-6 mb-3 d-flex justify-content-center">
+            <img src="https://www.ieeegecbh.org/assets/img/cslogo.png" alt="Logo" width="140" height="100">
+        </div>
+        <div class="col-md-2 col-6 mb-3 d-flex justify-content-center">
+            <img src="https://www.ieeegecbh.org/assets/img/cslogo.png" alt="Smiley face" width="140" height="100">
+        </div>
+        <div class="col-md-2 col-6 mb-3 d-flex justify-content-center">
+            <img src="https://www.ieeegecbh.org/assets/img/cslogo.png" alt="Smiley face" width="140" height="100">
+        </div>
+        <div class="col-md-2 col-6 mb-3 d-flex justify-content-center">
+            <img src="https://www.ieeegecbh.org/assets/img/cslogo.png" alt="Smiley face" width="140" height="100">
+        </div>
+        <div class="col-md-2 col-6 mb-3 d-flex justify-content-center">
+            <img src="https://www.ieeegecbh.org/assets/img/cslogo.png" alt="Smiley face" width="140" height="100">
+        </div>
+        <div class="col-md-2 col-6 mb-3 d-flex justify-content-center">
+            <img src="https://www.ieeegecbh.org/assets/img/cslogo.png" alt="Smiley face" width="140" height="100">
+        </div>
+    </div>
+    <div class="col">
+        <h2 style="height: 200px"></h2>
+    </div>
 </div>
 
 
