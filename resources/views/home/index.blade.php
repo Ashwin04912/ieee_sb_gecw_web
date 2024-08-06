@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <section class="bsb-hero-5 bsb-overlay img-fluid  position-relative"
-    style="background-image: url('{{ asset('assets/dummy-bg.jpg') }}'); height :100vh; background-attachment: fixed; background-size: cover">
+    style="background-image: url('{{ asset('assets/images/dummy-bg.jpg') }}'); height :104vh; background-attachment: fixed; background-size: cover">
 
 
    {{-- @extends('layouts.navigation') --}}
@@ -34,11 +34,11 @@
             <ul>
 
                 
-              <li><i class="ri-check-double-line"></i> Outstanding Student Branch IEEE India Council 2022.</li>
-              <li><i class="ri-check-double-line"></i> IEEE Region 10 Exemplerary Student Branch Award 2022.</li>
-              <li><i class="ri-check-double-line"></i> Darrel Chong Bronze Medal for the activity Student Development Program (SDP).</li>
-              <li><i class="ri-check-double-line"></i> 2<sup>nd</sup> Largest in IEEE Kerala Section.</li>
-              <li><i class="ri-check-double-line"></i> 2<sup>nd</sup> Largest Computer Society and Power and Energy Society Chapters Globally Membership-wise.</li>
+              <li><i class=""></i> Outstanding Student Branch IEEE India Council 2022.</li>
+              <li><i class=""></i> IEEE Region 10 Exemplerary Student Branch Award 2022.</li>
+              <li><i class=""></i> Darrel Chong Bronze Medal for the activity Student Development Program (SDP).</li>
+              <li><i class=""></i> 2<sup>nd</sup> Largest in IEEE Kerala Section.</li>
+              <li><i class=""></i> 2<sup>nd</sup> Largest Computer Society and Power and Energy Society Chapters Globally Membership-wise.</li>
             </ul>
           </div></div>
         <div class="col-md-6 "><img src="https://images.pexels.com/photos/2422290/pexels-photo-2422290.jpeg?cs=srgb&dl=pexels-jopwell-2422290.jpg&fm=jpg" class="img-fluid" alt="..."></div>
