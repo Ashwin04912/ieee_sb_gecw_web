@@ -19,6 +19,17 @@
         </div>
         <br>
 
+        <div class="row">
+            @include('achievements.001_exampleLinus')
+            @include('achievements.002_exampleElephant')
+            @include('achievements.002_exampleElephant')
+        </div>
+        <div class="row">
+            @include('achievements.000_emptyCard')
+            @include('achievements.000_emptyCard')
+            @include('achievements.000_emptyCard')
+        </div>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
