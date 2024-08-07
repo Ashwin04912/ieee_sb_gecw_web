@@ -1,41 +1,37 @@
-@include('layouts.app')
-<html>
+@extends('layouts.app')
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>IEEE SB GECW - Achievements</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
 
-<body>
-    <br>
-    <br>
-    <br>
-    <div class="container pt-5 my_container">
-        <h2 align="center">ACHIEVEMENTS</h2>
-        <div class=" d-flex justify-content-center">
-            <hr style="width: 300px">
+@section('content')
+    
+
+
+  
+    <div class="container mt-5" >
+        <div class="row pt-5">
+            <h2 class="pt-5 justify-content-center align-items-center" >ACHIEVEMENTS</h2>
         </div>
-        <br>
-
+       
+       
+  
+     <div class="container-fluid mt-5">
         <div class="row">
-            @include('achievements.001_exampleLinus')
-            @include('achievements.002_exampleElephant')
-            @include('achievements.002_exampleElephant')
+            @for ($i = 0; $i < 12; $i++)
+                <div class="col-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://ieeesbcea.com/wp-content/uploads/2023/06/WhatsApp-Image-2023-06-13-at-00.52.26-4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            @endfor
         </div>
-        <div class="row">
-            @include('achievements.000_emptyCard')
-            @include('achievements.000_emptyCard')
-            @include('achievements.000_emptyCard')
-        </div>
-
     </div>
+    
+        
+        
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
+ 
     @include('layouts.footer')
-</body>
+    @endsection
 
-</html>
