@@ -3,37 +3,45 @@
 }
 
 .navbar-nav .nav-link:hover {
-    color: #ff0000 !important; /* Change this to your desired hover color */
+    color: #ff0000 !important;
+    /* Change this to your desired hover color */
 }
 
+
+
 .navbar-nav .dropdown-menu .dropdown-item:hover {
-    color: #ff0000 !important; /* Change this to your desired hover color */
+    color: #ff0000 !important;
+    /* Change this to your desired hover color */
 }
 
 /* Highlight active navigation item */
-.navbar .nav-item.selected a.nav-link {
-    color: blue !important; /* Text color for selected item */
-    font-weight: bold; /* Make text bold */
+.navbar-nav .nav-item.selected .nav-link {
+    color: blue !important;
+    /* Text color for selected item */
+    font-weight: bold;
+    /* Make text bold */
 }
 
 /* Custom selection color specifically for the navbar */
 .navbar ::selection {
-    background-color: #ffcc00; /* Background color of the selection */
-    color: #000000; /* Text color of the selection */
+    background-color: #ffcc00;
+    /* Background color of the selection */
+    color: #000000;
+    /* Text color of the selection */
 }
 
-.im-logo{
+.im-logo {
     opacity: 0.8;
 }
 
 
-.container-fluid{
+.container-fluid {
     padding-left: 0px !important;
     padding-right: 0px !important;
     margin-top: -16px !important;
 }
 
-.ScrollCss{
+.ScrollCss {
     transition: 1s;
     opacity: .8;
 }
@@ -45,7 +53,8 @@
 html {
     scroll-behavior: smooth;
 }
-.image-container img:hover {
-    zoom: 1.09;
-    transition: .6s;
+
+.image-container:hover {
+    transform: scale(1.09);
+    transition: transform 0.6s;
 }

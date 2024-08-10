@@ -55,6 +55,8 @@
 
     {{-- CSS IMPORTS --}}
     <link rel="stylesheet" href="{{ asset('css/navigation.css') }}">
+      {{-- gallery css --}}
+      <link rel="stylesheet" href="{{ asset('assets/css/gallery.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendors/mdi/css/materialdesignicons.min.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('assets/vendors/flag-icon-css/css/flag-icon.min.css') }}">
@@ -76,8 +78,13 @@
     {{-- icon home --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
 
+{{-- socia-media icons --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <script src="{{asset('assets/js/gallery.js')}}"></script>
+
     
-        
+      
 
 
 </head>
