@@ -8,6 +8,21 @@
   transition: transform 0.3s ease-in-out;
 }
 
+hr {
+  border: 0;
+  height: 3px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+
+.container h1 {
+  font-family: 'Raleway';
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-size: 50px;
+}
+
 .profile-card img {
   width: 100%;
   height: 100%;
@@ -28,11 +43,11 @@
   text-align: center;
   padding: 20px;
   transition: transform 0.3s ease-in-out;
-  transform: translateX(100%);
+  transform: translateY(100%);
 }
 
 .profile-card:hover .card-body {
-  transform: translateZ(0);
+  transform: translateY(0);
 }
 
 .social-icons {

@@ -4,7 +4,8 @@
 
 <div class="container pt-5 mt-5">
 
-    <h2 class="pt-5 text-center">ACHIEVEMENTS</h2>
+    <h1 class="pt-5 ">ACHIEVEMENTS</h2>
+        <hr>
     
    
     <div class="container-fluid mt-5">
@@ -31,6 +32,21 @@
     .card {
     overflow: hidden; /* Ensures content doesn’t spill out of the card */
 }
+
+hr {
+	  border: 0;
+	  height: 3px;
+	  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+  
+  
+  .container h1 {
+	  font-family: 'Raleway';
+	  font-weight: 900;
+	  text-transform: uppercase;
+	  letter-spacing: -1px;
+	  font-size: 50px;
+  }
 
 .zoom-image {
     transition: transform 0.3s ease; /* Smooth transition for zoom effect */

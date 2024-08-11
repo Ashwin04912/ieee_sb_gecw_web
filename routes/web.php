@@ -27,8 +27,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[HomeController::class , 'index'])->name('home');
 Route::get('/about-us',[AboutController::class, 'index' ])->name('about.us');
-Route::get('/events',[EventsController::class, 'index' ])->name('events');
+Route::get('/events',[EventsController::class, 'index' ])->name('events.list');
 Route::get('/achievements',[AchieveController::class, 'index' ])->name('achievements');
 Route::get('/computer',[computerController::class, 'index' ])->name('computer');
 Route::get('/execom',[ExecomController::class, 'index'])->name('execom.list');
 Route::get('/gallery',[GalleryController::class, 'index'])->name('gallery.list');
+

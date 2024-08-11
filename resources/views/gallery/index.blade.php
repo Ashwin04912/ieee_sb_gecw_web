@@ -83,9 +83,7 @@
     </div>
 
  
-    <script>
-
-    </script>
+ @include('layouts.footer')
 
 @endsection
 

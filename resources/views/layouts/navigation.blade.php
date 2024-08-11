@@ -81,21 +81,14 @@
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item {{ Route::currentRouteName() == 'events' ? 'selected' : '' }}">
-                            <a class="nav-link text-light" href="{{ route('events') }}">Events</a>
+                        <li class="nav-item {{ Route::currentRouteName() == 'events.list' ? 'selected' : '' }}">
+                            <a class="nav-link text-light" href="{{ route('events.list') }}">Events</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Execom
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item {{ Route::currentRouteName() == 'execom' ? 'selected' : '' }}""
-                                        href="{{ route('execom.list') }}">Computer Society</a></li>
-                                <li><a class="dropdown-item" href="#">Women In Engineering</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
+
+                        <li class="nav-item {{ Route::currentRouteName() == 'execom.list' ? 'selected' : '' }}">
+                            <a class="nav-link text-light" onclick="" href="{{ route('execom.list') }}">Execom</a>
                         </li>
+                        
                         <li class="nav-item {{ Route::currentRouteName() == 'achievements' ? 'selected' : '' }}">
                             <a class="nav-link text-light" href="{{ route('achievements') }}">Achievements</a>
                         </li>
@@ -109,39 +102,7 @@
         </div>
     </nav>
 
-    <script>
-        $(window).scroll(function() {
-            if ($(window).scrollTop() >= 150) {
-                $('#ScrollJq').css('background', 'black');
-            } else {
-                $('#ScrollJq').css('background', 'transparent');
-            }
-        });
-
-        $(document).ready(function() {
-    var currentRoute = $('body').data('route-name');
-    if (currentRoute === 'home') {
-        $('#navbar').css({
-            'background': 'transparent'
-        });
-    } else {
-        $('#navbar').css({
-            'background': 'black',
-            'opacity': '1'
-        });
-    }   
-
-            $('a[href^="#"]').on('click', function(event) {
-                var target = $(this.getAttribute('href'));
-                if (target.length) {
-                    event.preventDefault();
-                    $('html, body').stop().animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                }
-            });
-        });
-    </script>
+    <script src="{{asset('assets/js/navigation.js')}}"></script>
 
 
 </body>

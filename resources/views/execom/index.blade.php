@@ -1,9 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
- <div class="container">
-    <h2 class="pt-5 pb-5 text-center">EXECOM</h2>
-    </div>
+ <div class="container pt-5 mt-5">
+    <h1 class="pt-5">EXECOM</h2>
+        <hr>
+  
     <div class="row justify-content-center">
         @for ($i = 0; $i < 16; $i++)
         <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center mb-4">
@@ -23,6 +24,7 @@
         </div>
         @endfor
  </div>
+
 
     
 
