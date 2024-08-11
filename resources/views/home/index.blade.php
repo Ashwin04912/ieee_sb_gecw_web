@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('content')
+    
+
     <section class="bsb-hero-5 bsb-overlay img-fluid  position-relative home" id="top"
         style="background-image: url('{{ asset('assets/images/dummy-bg.jpg') }}'); height :104vh; background-attachment: fixed; background-size: cover">
 
@@ -58,33 +60,30 @@
         </div>
     </div>
 
-    
     <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ asset('assets/images/mtts_logo.png') }}" class="img-fluid" alt="">
-          </div>
-      
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ asset('assets/images/csociety_logo.png') }}" class="img-fluid" alt="">
-          </div>
-      
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ asset('assets/images/aps_logo.png') }}" class="img-fluid p-5" alt="">
-          </div>
-      
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ asset('assets/images/wie_logo.png') }}" class="img-fluid p-5" alt="">
-          </div>
-      
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ asset('assets/images/sight_logo.png') }}" class="img-fluid p-3" alt="">
-          </div>
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                <img src="{{ asset('assets/images/mtts_logo.png') }}" class="img-fluid image-container" alt="MTTS Logo">
+            </div>
+    
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                <img src="{{ asset('assets/images/csociety_logo.png') }}" class="img-fluid image-container" alt="CSociety Logo">
+            </div>
+    
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                <img src="{{ asset('assets/images/aps_logo.png') }}" class="img-fluid image-container p-5" alt="APS Logo">
+            </div>
+    
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                <img src="{{ asset('assets/images/wie_logo.png') }}" class="img-fluid image-container p-5" alt="WIE Logo">
+            </div>
+    
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                <img src="{{ asset('assets/images/sight_logo.png') }}" class="img-fluid image-container p-3" alt="SIGHT Logo">
+            </div>
         </div>
-      </div>
-      
-
-
+    </div>
+    
 
 
         <div class="col">
