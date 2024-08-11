@@ -1,23 +1,20 @@
-# Use the latest version of the richarvey/nginx-php-fpm image
-FROM richarvey/nginx-php-fpm:latest
+FROM richarvey/nginx-php-fpm:latest 
 
-# Copy application files
-COPY . /var/www/html
+COPY . .
 
-# Set environment variables
-ENV SKIP_COMPOSER=1
-ENV WEBROOT=/var/www/html/public
-ENV PHP_ERRORS_STDERR=1
-ENV RUN_SCRIPTS=1
-ENV REAL_IP_HEADER=1
+# Image config
+ENV SKIP_COMPOSER 1
+ENV WEBROOT /var/www/html/public
+ENV PHP_ERRORS_STDERR 1
+ENV RUN_SCRIPTS 1
+ENV REAL_IP_HEADER 1
 
-# Laravel configuration
-ENV APP_ENV=production
-ENV APP_DEBUG=false
-ENV LOG_CHANNEL=stderr
+# Laravel config
+ENV APP_ENV staging
+ENV APP_DEBUG true
+ENV LOG_CHANNEL stderr
 
 # Allow composer to run as root
-ENV COMPOSER_ALLOW_SUPERUSER=1
+ENV COMPOSER_ALLOW_SUPERUSER 1
 
-# Command to run when the container starts
 CMD ["/start.sh"]
