@@ -78,7 +78,9 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Computer Society</a></li>
                                 <li><a class="dropdown-item" href="#">Women In Engineering</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#">Antennas and Propagation Society</a></li>
+                                <li><a class="dropdown-item" href="#">Microwave Theory and Technology Society</a></li>
+                                <li><a class="dropdown-item" href="#">Sight</a></li>
                             </ul>
                         </li>
                         <li class="nav-item {{ Route::currentRouteName() == 'events.list' ? 'selected' : '' }}">
