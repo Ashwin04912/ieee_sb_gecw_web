@@ -21,7 +21,7 @@
                         <span class="fa-li"><i class="fas fa-location-dot"></i></span>
                         <span class="ms-2">
                             <a href="https://maps.app.goo.gl/nicoo6Cz1wppTm2Z9"
-                                style="color:white;text-decoration:none">Thalapuzha, NY 10012, US</a>
+                                style="color:white;text-decoration:none">Thalapuzha, 670644, Kerala</a>
                         </span>
                     </li>
                     <li class="mb-3">
