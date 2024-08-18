@@ -27,10 +27,11 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/events/create', [EventsController::class, 'create'])->name('events.create');
+    Route::post('/events/store', [EventsController::class, 'store'])->name('events.store');
 });
 
 
-
+    
 // landing page routes
 
 Route::get('/', [HomeController::class, 'index'])->name('home');

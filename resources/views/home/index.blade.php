@@ -9,7 +9,7 @@
         {{-- @extends('layouts.navigation') --}}
 
         <div class="container">
-            <div class="row justify-content-md-center align-items-center">
+            <div class="row justify-content-md-center align-items-center" >
                 <div class="col-12 col-md-11 col-lg-9 col-xl-8 col-xxl-7">
                     <h2 class="display-1 text-white text-center fw-bold mb-4">Dream of Success</h2>
                     <p class="lead text-white text-center mb-5 d-flex justify-content-sm-center">
