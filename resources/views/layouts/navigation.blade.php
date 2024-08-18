@@ -76,7 +76,7 @@
                                 Societies
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Computer Society</a></li>
+                                <li><a class="dropdown-item {{ Route::currentRouteName() == 'computer'? 'selected' : ''}}" href="{{route('computer')}}">Computer Society</a></li>
                                 <li><a class="dropdown-item" href="#">Women In Engineering</a></li>
                                 <li><a class="dropdown-item" href="#">Antennas and Propagation Society</a></li>
                                 <li><a class="dropdown-item" href="#">Microwave Theory and Technology Society</a></li>

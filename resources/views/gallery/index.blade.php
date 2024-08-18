@@ -15,7 +15,7 @@
     <!-- Page Content -->
 
 
-   <div class="container pt-5">
+   <div class="m-5 p-5">
     <h1 class="pt-5 mt-5">Photo/Gallery</h1>
     <hr>
 
