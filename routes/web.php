@@ -14,6 +14,21 @@ use Illuminate\Support\Facades\Route;
 
 //admin page routes
 
+Route::get('/admin', function () {
+    return view('auth.login');
+});
+
+Route::get('/dashboard', function () {
+    return view('admin_home.index');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/events/create', [EventsController::class, 'create'])->name('events.create');
+});
+
 
 
 // landing page routes
@@ -32,18 +47,6 @@ Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.list'
 
 
 
-Route::get('/admin', function () {
-    return view('auth.login');
-});
 
-Route::get('/dashboard', function () {
-    return view('admin_home.index');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
 
 require __DIR__.'/auth.php';
