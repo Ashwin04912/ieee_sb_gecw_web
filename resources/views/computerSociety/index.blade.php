@@ -1,40 +1,76 @@
 @extends('layouts.app')
+@section('content')
+    <link rel="stylesheet" href="{{ asset('assets/css/computer.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aos/aos.css') }}">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <!-- AOS JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script src="{{ asset('assets/aos/aos.js') }}"></script>
 
 
-<section id="cs-society" class="home-margin-top pb-5 bg-light">
-    <div class="container-fluid  ">
-        <h3 class="society-head  text-center pt-5 bold">Computer Society</h3>
-        <hr style="width:300px;">
-        <div class="row mt-5 d-flex justify-content-center">
-            <div class="col-md-5  bg-light1  ">
-                <img src="./images/ieee cs society.png" class="ml-5 " height="150px" alt>
-                <hr style=" width:300px;" class="hr-inner-position-head">
-                <p class="abt-clg-detail ml-3 position-text-society-head  "> IEEE Computer Society is a professional
-                    society of IEEE. It focuses on advancing the
-                    theory, practice and application of computer and information processing science and technology
-                    and the “ professional standing of its members “. The Computer society is the largest of 39
-                    technical societies organised under the IEEE Techni Activities Board.</p>
-            </div>
-            <div class="col-md-5 bg-light1">
-                <div class=" bg-light1 ">
-                    <h4 class="bold   text-vsn-msn text-center pt-5 "> <span><img class="vsn-msn mb-3"
-                                src="./images/mission.png" alt></span> Mission</h4>
-                    <hr style="width:300px;" class="hr-inner-position">
-                    <p class="abt-clg-detail ml-3 position-text-society  ">Be essential to the global technical
-                        community and computer professionals everywhere and be universally recognized for the
-                        contributions of technical professionals in developing and applying technology to improve global
-                        conditions.</p>
-                </div>
-                <div class=" bg-light1">
-                    <h4 class="bold  text-vsn-msn  text-center pt-3"> <span><img class="vsn-msn mb-3"
-                                src="./images/vision.png" alt></span> Vision</h4>
-                    <hr style=" width:300px;" class="hr-inner-position">
-                    <p class="abt-clg-detail ml-3 position-text-society  ">To be the leading provider of technical
-                        information, community services, and personalized services to the world's
-                        computing professionals.
-                    </p>
-                </div>
-            </div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+        <div class="hero-bg">
+          <img src="{{ asset('assets/images/hero-bg-light.webp') }}" alt="">
         </div>
-    </div>
-</section>
+        <div class="container text-center">
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <h1 data-aos="fade-up">Welcome to <span>Computer societies</span></h1>
+            <p data-aos="fade-up" data-aos-delay="100">Quickly start your project now and set the stage for success<br></p>
+            <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+              <a href="#about" class="btn-get-started">Get Started</a>
+             
+            </div>
+            {{-- <img src="assets/img/hero-services-img.webp" class="img-fluid hero-img" alt="" data-aos="zoom-out" data-aos-delay="300"> --}}
+          </div>
+        </div>
+  
+      </section><!-- /Hero Section -->
+
+
+                 <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <p class="who-we-are">Who We Are</p>
+            <h3>Unleashing Potential with Creative Strategy</h3>
+            <p class="fst-italic">
+                IEEE Computer Society is the leading provider of technical information, community services and personalized services to the world's computing and computer science professionals. IEEE Computer Society strives to be essential to the global technical community and computer professionals everywhere and be universally recognized for the contributions of technical professionals in researching, developing, and applying technology to improve global conditions.            
+            
+            </p>
+         
+            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+          <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-4">
+              <div class="col-lg-6">
+                <img src="{{ asset('assets/images/IEEE-CS_LogoTM_black.png') }}" class="img-fluid" alt="">
+              </div>
+              
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- /About Section -->.
+              
+
+      
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init();
+        });
+    </script>
+@endsection
