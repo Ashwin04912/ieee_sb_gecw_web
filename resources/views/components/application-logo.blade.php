@@ -1,0 +1,1 @@
+{{-- logo of admin page --}}
