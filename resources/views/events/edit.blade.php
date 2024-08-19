@@ -13,50 +13,40 @@
 
     <div class="container m-4">
 
-        <form action="{{ route('events.store') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('events.editsave') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <h1 class="mb-5">Add New Events</h1>
-
+        
             @if (session()->has('success'))
                 <div class="alert alert-success">
                     {{ session()->get('success') }}
                 </div>
-           
-
-            @elseif (session()->has('error'))
-            <div class="alert alert-error">
-              {{ session()->get('error') }}
-          </div>
-
-          @endif
-
+            @endif
+        
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" id="title" name="title" placeholder="Enter a title"
-                    value="{{ old('title') }}">
+                <input type="text" class="form-control" id="title" name="title" placeholder="Enter a title" value="{{ $event->title }}">
                 @error('title')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
-
+            <input type="hidden" name="id" value="{{ $event->id }}">
             <div class="mb-3">
                 <label for="date" class="form-label">Event Date</label>
-                <input type="text" class="form-control" id="date" name="date" placeholder="17-04-2004"
-                    value="{{ old('date') }}">
+                <input type="text" class="form-control" id="date" name="date" placeholder="17-04-2004" value="{{ $event->date }}">
                 @error('date')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
-
+        
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
-                <textarea name="description" id="description" class="form-control" cols="30" rows="10"
-                    placeholder="Enter a description">{{ old('description') }}</textarea>
+                <textarea name="description" id="description" class="form-control" cols="30" rows="10" placeholder="Enter a description">{{ $event->description }}</textarea>
                 @error('description')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
-
+        
             <div class="mb-3">
                 <label for="image1">First Image</label>
                 <input type="file" class="form-control" id="image1" name="image1">
@@ -64,7 +54,7 @@
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
-
+        
             <div class="mb-3">
                 <label for="image2">Second Image</label>
                 <input type="file" class="form-control" id="image2" name="image2">
@@ -72,7 +62,7 @@
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
-
+        
             <div class="mb-3">
                 <label for="image3">Third Image</label>
                 <input type="file" class="form-control" id="image3" name="image3">
@@ -80,14 +70,17 @@
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
-
+        
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+        
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
+
+    <a href="{{route('events.editsave')}}">test</a>
 </body>
 
 </html>

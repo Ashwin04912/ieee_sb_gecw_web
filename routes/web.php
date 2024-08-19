@@ -27,8 +27,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/events/list', [EventsController::class, 'list'])->name('events.list');
     Route::get('/events/create', [EventsController::class, 'create'])->name('events.create');
     Route::post('/events/store', [EventsController::class, 'store'])->name('events.store');
-    Route::post('/events/edit', [EventsController::class, 'edit'])->name('events.edit');
-    Route::get('/events/delete/{id}', [EventsController::class, 'delete'])->name('events.delete');
+    Route::post('/events/edit/{id}', [EventsController::class, 'edit'])->name('events.edit');
+    Route::post('/events/delete/{id}', [EventsController::class, 'delete'])->name('events.delete');
+    // routes/web.php
+Route::post('/events/editsave', [EventsController::class, 'editSave'])->name('events.editsave');
+
     //add routes
 
     
