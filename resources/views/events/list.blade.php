@@ -17,12 +17,23 @@ function limitWords($text, $limit = 10) {
 
 <div class="container-fluid p-5" style="width: 85%; position: relative;">
     <!-- Add New Button -->
+
+   
+
+
+
     <div class="button-container pb-5">
     <a href="{{ route('events.create') }}" class="btn btn-primary">Add New</a>
 </div>
+
+@if (session()->has('success'))
+<div class="alert alert-success">
+    {{ session()->get('success') }}
+</div>
+@endif
     
 
-    @foreach ($datas as $data)
+    
     <table id="example" class="display">
         <thead>
             <tr>
@@ -36,20 +47,22 @@ function limitWords($text, $limit = 10) {
             </tr>
         </thead>
         <tbody>
+            @foreach ($datas as $data)
             <tr>
                 <td>{{$data->title}}</td>
                 <td class="truncate">{{ limitWords($data->description) }}</td>
                 <td>{{$data->date}}</td>
-                <td>{{$data->image1}}</td>
+                <td>  {{$data->image1}}</td>
                 <td>{{$data->image2}}</td>
                 <td>{{$data->image3}}</td>
                 <td>
                     <div class="row">
-                        <a href="#" class="p-2">edit</a>
-                        <a href="#" class="p-2">delete</a>
+                        <a href="{{ route('events.edit', ['id' => $data->id]) }}" class="p-2">Edit</a>
+                        <a href="{{ route('events.delete', ['id' => $data->id]) }}" class="p-2">Delete</a>
                     </div>
                 </td>
             </tr>
+            @endforeach
         </tbody>
         {{-- <tfoot>
             <tr>
@@ -63,7 +76,7 @@ function limitWords($text, $limit = 10) {
             </tr>
         </tfoot> --}}
     </table>
-    @endforeach
+    
 </div>
 
 <!-- Include jQuery -->

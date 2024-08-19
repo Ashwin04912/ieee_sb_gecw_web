@@ -17,19 +17,11 @@
             @csrf
             <h1 class="mb-5">Add New Events</h1>
 
-            @if (session()->has('success'))
-                <div class="alert alert-success">
-                    {{ session()->get('success') }}
+            @if (session()->has('error'))
+                <div class="alert alert-error">
+                    {{ session()->get('error') }}
                 </div>
-           
-
-            @elseif (session()->has('error'))
-            <div class="alert alert-error">
-              {{ session()->get('error') }}
-          </div>
-
-          @endif
-
+            @endif
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
                 <input type="text" class="form-control" id="title" name="title" placeholder="Enter a title"
@@ -82,6 +74,11 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
+            @if (session()->has('error'))
+                <div class="alert alert-error">
+                    {{ session()->get('error') }}
+                </div>
+            @endif
         </form>
     </div>
 

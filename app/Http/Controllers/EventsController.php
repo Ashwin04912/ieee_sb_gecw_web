@@ -28,7 +28,7 @@ public function list(){
 
     public function store(Request $request)
     {
-        try {
+     
             // Validate the request data
             $data = $request->validate([
                 'image1' => 'required|mimes:png,jpg,jpeg',
@@ -51,19 +51,32 @@ public function list(){
             // Prepare data for insertion
             $eventData = array_merge($data, $imageNames);
 
-           
-            Event::create($eventData);
-
-            
-            return back()->with('success', 'Event added to the database.');
-            
-        } catch (Exception $e) {
-            // Log the exception
-            Log::error('Error adding event: ' . $e->getMessage());
+            try{
+                Event::create($eventData);
+                return redirect(route('events.list'))->with('success', 'Event added to the database.');
+            }catch(Exception $e){
+                Log::error('Error adding event: ' . $e->getMessage());
 
             // Redirect with error message
-            return back()->with('error', 'There was a problem adding the event. '.$e->getMessage());
-        }
+            return back()->with('error', 'There was a problem adding the event. '.$e->getMessage());  
+            }
+
+
+           
+          
+
+            
+           
+            
+      
+    }
+    
+    public function edit(){
+        
     }
 
+    public function delete($id){
+        
+        
+    }
 }
