@@ -16,7 +16,7 @@
 
 <body data-route-name="{{ Route::currentRouteName() }}">
 
-    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+    <nav class="navbar navbar-expand-lg " id="navbar">
         <div class="container-fluid ScrollCss" id="ScrollJq">
             <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="{{ asset('assets/images/sb_logo.png') }}" alt="Logo" width="100" height="100"
@@ -84,8 +84,8 @@
                                 <li><a class="dropdown-item" href="#">Sight</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item {{ Route::currentRouteName() == 'events.index' ? 'selected' : '' }}">
-                            <a class="nav-link text-light" href="{{ route('events.index') }}">Events</a>
+                        <li class="nav-item {{ Route::currentRouteName() == 'events.list' ? 'selected' : '' }}">
+                            <a class="nav-link text-light" href="{{ route('events.list') }}">Events</a>
                         </li>
 
                         <li class="nav-item {{ Route::currentRouteName() == 'execom.list' ? 'selected' : '' }}">

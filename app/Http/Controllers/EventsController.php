@@ -16,6 +16,11 @@ class EventsController extends Controller
         return view('events.index',compact('datas'));
     }
 
+public function list(){
+    $datas = Event::all();
+    return view('events.list',compact('datas'));
+}
+
     public function create()
     {
         return view('events.create');
