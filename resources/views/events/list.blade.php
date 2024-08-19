@@ -1,28 +1,41 @@
 @include('layouts.admin_navigation')
 <!-- Include DataTables CSS -->
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.materialdesignicons.com/6.4.95/css/materialdesignicons.min.css">
 
 @php
-function limitWords($text, $limit = 10) {
-    $words = explode(' ', $text);
-    if (count($words) > $limit) {
-        $words = array_slice($words, 0, $limit);
-        return implode(' ', $words) . '...';
+    function limitWords($text, $limit = 10)
+    {
+        $words = explode(' ', $text);
+        if (count($words) > $limit) {
+            $words = array_slice($words, 0, $limit);
+            return implode(' ', $words) . '...';
+        }
+        return $text;
     }
-    return $text;
-}
 @endphp
 
 
 
 <div class="container-fluid p-5" style="width: 85%; position: relative;">
     <!-- Add New Button -->
-    <div class="button-container pb-5">
-    <a href="{{ route('events.create') }}" class="btn btn-primary">Add New</a>
-</div>
-    
 
-    @foreach ($datas as $data)
+
+
+
+
+    <div class="button-container pb-5">
+        <a href="{{ route('events.create') }}" class="btn btn-primary">Add New</a>
+    </div>
+
+    @if (session()->has('success'))
+        <div class="alert alert-success">
+            {{ session()->get('success') }}
+        </div>
+    @endif
+
+
+
     <table id="example" class="display">
         <thead>
             <tr>
@@ -36,20 +49,45 @@ function limitWords($text, $limit = 10) {
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>{{$data->title}}</td>
-                <td class="truncate">{{ limitWords($data->description) }}</td>
-                <td>{{$data->date}}</td>
-                <td>{{$data->image1}}</td>
-                <td>{{$data->image2}}</td>
-                <td>{{$data->image3}}</td>
-                <td>
-                    <div class="row">
-                        <a href="#" class="p-2">edit</a>
-                        <a href="#" class="p-2">delete</a>
-                    </div>
-                </td>
-            </tr>
+            @foreach ($datas as $data)
+                <tr>
+                    <td>{{ $data->title }}</td>
+                    <td class="truncate">{{ limitWords($data->description) }}</td>
+                    <td>{{ $data->date }}</td>
+                    <td><img src="{{ asset('uploads/images/events/' . $data->image1) }}" style="height: 100px" alt="" srcset=""></td>
+                    <td><img src="{{ asset('uploads/images/events/' . $data->image2) }}" style="height: 100px" alt="" srcset=""></td>
+                    <td><img src="{{ asset('uploads/images/events/' . $data->image3) }}" style="height: 100px" alt="" srcset=""></td>
+                   
+                    <td>
+                        <div class="col">
+                            
+
+                            <form method="POST"
+                            action="{{ route('events.edit', ['id' => $data->id]) }}"
+                            accept-charset="UTF-8" style="display:inline">
+                            {{ method_field('POST') }}
+                            {{ csrf_field() }}
+                            <button type="submit" class="btn  p-2" title="Edit event"
+                                onclick="return confirm(&quot;Confirm edit?&quot;)">
+                                <span class=" mdi mdi-database-edit text-primary  fs-5"></span>
+
+                            </button>
+                        </form>
+
+                            <form method="POST" action="{{ route('events.delete', ['id' => $data->id]) }}"
+                                accept-charset="UTF-8" style="display:inline">
+                                {{ method_field('POST') }}
+                                {{ csrf_field() }}
+                                <button type="submit" class="btn  p-2 " title="Delete event"
+                                    onclick="return confirm(&quot;Confirm delete?&quot;)">
+                                    <span class=" mdi mdi-delete-empty-outline text-danger  fs-5" ></span>
+
+                                </button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            @endforeach
         </tbody>
         {{-- <tfoot>
             <tr>
@@ -63,7 +101,7 @@ function limitWords($text, $limit = 10) {
             </tr>
         </tfoot> --}}
     </table>
-    @endforeach
+
 </div>
 
 <!-- Include jQuery -->
@@ -81,7 +119,7 @@ function limitWords($text, $limit = 10) {
 <style>
     .button-container {
         position: relative;
-        z-index: 1000; /* Ensure it is above other elements */
+        z-index: 1000;
+        /* Ensure it is above other elements */
     }
- 
 </style>

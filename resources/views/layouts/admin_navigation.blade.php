@@ -63,8 +63,8 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav ms-auto me-4">
-                        <li class="nav-item {{ Route::currentRouteName() == 'home' ? 'selected' : '' }}">
-                            <a class="nav-link active text-light" aria-current="page" href="#top">Home</a>
+                        <li class="nav-item {{ Route::currentRouteName() == 'dashboard' ? 'selected' : '' }}">
+                            <a class="nav-link active text-light" aria-current="page" href="{{route('dashboard')}}">Home</a>
                         </li>
                         <li class="nav-item {{ Route::currentRouteName() == 'about.us' ? 'selected' : '' }}">
                             <a class="nav-link text-light" onclick="$('.about_us')[0].focus()" href="#">About
