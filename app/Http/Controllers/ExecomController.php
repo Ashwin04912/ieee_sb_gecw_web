@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Event;
+use App\Models\Execom;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Exception;
@@ -13,13 +13,13 @@ class ExecomController extends Controller
 {
     public function index()
     {
-        $datas = Event::all();
+        $datas = Execom::all();
         return view('execom.index', compact('datas'));
     }
 
     public function list()
     {
-        $datas = Event::all();
+        $datas = Execom::all();
         return view('execom.list', compact('datas'));
     }
 
@@ -33,28 +33,24 @@ class ExecomController extends Controller
 
         // Validate the request data
         $data = $request->validate([
-            'image1' => 'required|mimes:png,jpg,jpeg',
-            'image2' => 'required|mimes:png,jpg,jpeg',
-            'image3' => 'required|mimes:png,jpg,jpeg',
+            'name' => 'required|string',
             'title' => 'required|string|',
-            'description' => 'required|string',
-            'date' => 'required|date',
+            'image' => 'required|mimes:png,jpg,jpeg',
+            'github' => 'string',
+            'insta' => 'string',
+            'linkedin' => 'string',
         ]);
 
         // Handle image uploads
         $imageNames = [];
-        foreach (['image1', 'image2', 'image3'] as $imageKey) {
-            $image = $request->file($imageKey);
-            $imageName = time() . '_' . $imageKey . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('uploads/images/events'), $imageName);
-            $imageNames[$imageKey] = $imageName;
-        }
-
-        // Prepare data for insertion
-        $eventData = array_merge($data, $imageNames);
+        $image = $request->file('image');
+        $name = $request->string('name')->trim(" ");
+        $imageName = time() . '_' . $name . '.' . $image->getClientOriginalExtension();
+        $image->move(public_path('uploads/images/execoms'), $imageName);
+        $data['image'] = $imageName;
 
         try {
-            Event::create($eventData);
+            Execom::create($data);
             return redirect(route('execom.list'))->with('success', 'Event added to the database.');
         } catch (Exception $e) {
             Log::error('Error adding event: ' . $e->getMessage());
@@ -66,21 +62,20 @@ class ExecomController extends Controller
 
     public function edit($id)
     { {
-            $event = Event::find($id);
-            // dd($event);
+            $event = Execom::find($id);
             return view('execom.edit', compact('event'));
         }
     }
-    public function editsave(Request $request)
+    public function editSave(Request $request)
     {
         $data = $request->validate([
+            'name' => 'required|string',
             'title' => 'required|string',
-            'description' => 'required|string',
-            'date' => 'required|date',
-            'id' => 'required|integer|exists:events,id', // Ensure the ID exists in the events table
-            'image1' => 'nullable|mimes:png,jpg,jpeg',
-            'image2' => 'nullable|mimes:png,jpg,jpeg',
-            'image3' => 'nullable|mimes:png,jpg,jpeg',
+            'id' => 'required|integer|exists:execoms,id', // Ensure the ID exists in the events table
+            'image' => 'nullable|mimes:png,jpg,jpeg',
+            'github' => 'nullable|string',
+            'insta' => 'nullable|string',
+            'linkedin' => 'nullable|string',
         ]);
 
         $id = $request->post('id');
@@ -88,27 +83,28 @@ class ExecomController extends Controller
 
         if ($data) {
             try {
-                $event = Event::find($id);
+                $execom = Execom::find($id);
 
                 // Prepare the data to be updated
                 $updateData = [
+                    'name' => $data['name'],
                     'title' => $data['title'],
-                    'description' => $data['description'],
-                    'date' => $data['date'],
+                    'github' => $data['github'],
+                    'insta' => $data['insta'],
+                    'linkedin' => $data['linkedin'],
                 ];
 
                 // Handle image uploads
-                foreach (['image1', 'image2', 'image3'] as $imageKey) {
-                    if ($request->hasFile($imageKey)) {
-                        $image = $request->file($imageKey);
-                        $imageName = time() . '_' . $imageKey . '.' . $image->getClientOriginalExtension();
-                        $image->move(public_path('uploads/images/events'), $imageName);
-                        $updateData[$imageKey] = $imageName;
-                    }
+                if ($request->hasFile('image')) {
+                    $image = $request->file('imageKey');
+                    $name = $request->string('name')->trim(" ");
+                    $imageName = time() . '_' . $name . '.' . $image->getClientOriginalExtension();
+                    $image->move(public_path('uploads/images/events'), $imageName);
+                    $updateData['image'] = $imageName;
                 }
 
-                // Update the event with the new data
-                $event->update($updateData);
+                // Update the execom with the new data
+                $execom->update($updateData);
 
                 return redirect(route('execom.list'))->with('success', 'Event updated successfully');
             } catch (\Throwable $th) {
@@ -122,26 +118,26 @@ class ExecomController extends Controller
     {
         try {
 
-            $event = Event::find($id);
+            $execom = Execom::find($id);
 
 
-            if (!$event) {
-                return redirect(route('execom.list'))->with('status', 'Event not found');
+            if (!$execom) {
+                return redirect(route('execom.list'))->with('status', 'Execom not found');
             }
 
 
-            // if ($event->image_path) {
+            // if ($execom->image_path) {
 
-            //     if (Storage::exists($event->image_path)) {
-            //         Storage::delete($event->image_path);
+            //     if (Storage::exists($execom->image_path)) {
+            //         Storage::delete($execom->image_path);
             //     }
             // }
 
 
-            if ($event->delete()) {
-                return redirect(route('execom.list'))->with('status', 'Event deleted successfully');
+            if ($execom->delete()) {
+                return redirect(route('execom.list'))->with('status', 'Execom deleted successfully');
             } else {
-                return redirect(route('execom.list'))->with('status', 'Event not deleted');
+                return redirect(route('execom.list'))->with('status', 'Execom not deleted');
             }
         } catch (\Throwable $th) {
             return redirect(route('execom.list'))->with('status', 'Error: ' . $th->getMessage());
