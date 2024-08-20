@@ -26,7 +26,7 @@
 .navbar ::selection {
     background-color: #ffcc00;
     /* Background color of the selection */
-    color: blanchedalmond;
+    color: #000000;
     /* Text color of the selection */
 }
 
@@ -59,11 +59,6 @@ html {
     transition: transform 0.6s;
 }
 
-#navbar{
-   background: transparent;
-    opacity: 1;
-
-}
 /* Add this to your CSS file, e.g., resources/css/navigation.css or a similar file */
 
 .logout-button {

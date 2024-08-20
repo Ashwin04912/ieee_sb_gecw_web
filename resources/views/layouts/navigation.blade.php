@@ -16,7 +16,7 @@
 
 <body data-route-name="{{ Route::currentRouteName() }}">
 
-    <nav class="navbar navbar-expand-lg fixed-top" id="navbar" style="background: transparent">
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
         <div class="container-fluid ScrollCss" id="ScrollJq">
             <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="{{ asset('assets/images/sb_logo.png') }}" alt="Logo" width="100" height="100"
