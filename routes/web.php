@@ -23,7 +23,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    //  event  
+    //  event
     Route::get('/events/list', [EventsController::class, 'list'])->name('events.list');
     Route::get('/events/create', [EventsController::class, 'create'])->name('events.create');
     Route::post('/events/store', [EventsController::class, 'store'])->name('events.store');
@@ -32,14 +32,22 @@ Route::middleware('auth')->group(function () {
     // routes/web.php
 Route::post('/events/editsave', [EventsController::class, 'editSave'])->name('events.editsave');
 
+    //  execom
+    Route::get('/execom/list', [ExecomController::class, 'list'])->name('execom.list');
+    Route::get('/execom/create', [ExecomController::class, 'create'])->name('execom.create');
+    Route::post('/execom/store', [ExecomController::class, 'store'])->name('execom.store');
+    Route::post('/execom/edit/{id}', [ExecomController::class, 'edit'])->name('execom.edit');
+    Route::post('/execom/delete/{id}', [ExecomController::class, 'delete'])->name('execom.delete');
+    Route::post('/execom/editsave', [ExecomController::class, 'editSave'])->name('execom.editsave');
+
     //add routes
 
-    
+
 });
 
 
 
-    
+
 // landing page routes
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -47,7 +55,7 @@ Route::get('/about-us', [AboutController::class, 'index'])->name('about.us');
 Route::get('/events', [EventsController::class, 'index'])->name('events.index');
 Route::get('/achievements', [AchieveController::class, 'index'])->name('achievements');
 Route::get('/computer', [computerController::class, 'index'])->name('computer');
-Route::get('/execom', [ExecomController::class, 'index'])->name('execom.list');
+Route::get('/execom', [ExecomController::class, 'index'])->name('execom.index');
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.list');
 
 
