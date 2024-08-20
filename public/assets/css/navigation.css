@@ -64,3 +64,25 @@ html {
     opacity: 1;
 
 }
+/* Add this to your CSS file, e.g., resources/css/navigation.css or a similar file */
+
+.logout-button {
+    background-color: #007bff; /* Primary color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding for better appearance */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Adjust font size as needed */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.logout-button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+    color: #e0e0e0; /* Lighter text color on hover */
+}
+
+.logout-button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Custom focus outline */
+}
