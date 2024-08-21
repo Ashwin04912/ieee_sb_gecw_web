@@ -39,22 +39,18 @@
     <table id="example" class="display">
         <thead>
             <tr>
-                <th>Execom Name</th>
-                <th>Description</th>
-                <th>Date</th>
-                <th>Image 1</th>
-                <th>Image 2</th>
-                <th>Image 3</th>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Image</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($datas as $data)
                 <tr>
+                    <td>{{ $data->name }}</td>
                     <td>{{ $data->title }}</td>
-                    <td class="truncate">{{ limitWords($data->description) }}</td>
-                    <td>{{ $data->date }}</td>
-                    <td><img src="{{ asset('uploads/images/execom/' . $data->image) }}" style="height: 100px" alt="" srcset=""></td>
+                    <td><img src="{{ asset('uploads/images/execoms/' . $data->image) }}" style="height: 100px" alt="" srcset=""></td>
 
                     <td>
                         <div class="col">
