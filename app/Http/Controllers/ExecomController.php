@@ -51,19 +51,19 @@ class ExecomController extends Controller
 
         try {
             Execom::create($data);
-            return redirect(route('execom.list'))->with('success', 'Event added to the database.');
+            return redirect(route('execom.list'))->with('success', 'Execom added to the database.');
         } catch (Exception $e) {
-            Log::error('Error adding event: ' . $e->getMessage());
+            Log::error('Error adding execom: ' . $e->getMessage());
 
             // Redirect with error message
-            return back()->with('error', 'There was a problem adding the event. ' . $e->getMessage());
+            return back()->with('error', 'There was a problem adding execom. ' . $e->getMessage());
         }
     }
 
     public function edit($id)
     { {
-            $event = Execom::find($id);
-            return view('execom.edit', compact('event'));
+            $execom = Execom::find($id);
+            return view('execom.edit', compact('execom'));
         }
     }
     public function editSave(Request $request)
@@ -71,7 +71,7 @@ class ExecomController extends Controller
         $data = $request->validate([
             'name' => 'required|string',
             'title' => 'required|string',
-            'id' => 'required|integer|exists:execoms,id', // Ensure the ID exists in the events table
+            'id' => 'required|integer|exists:execoms,id', // Ensure the ID exists in the execoms table
             'image' => 'nullable|mimes:png,jpg,jpeg',
             'github' => 'nullable|string',
             'insta' => 'nullable|string',
@@ -99,16 +99,16 @@ class ExecomController extends Controller
                     $image = $request->file('imageKey');
                     $name = $request->string('name')->trim(" ");
                     $imageName = time() . '_' . $name . '.' . $image->getClientOriginalExtension();
-                    $image->move(public_path('uploads/images/events'), $imageName);
+                    $image->move(public_path('uploads/images/execoms'), $imageName);
                     $updateData['image'] = $imageName;
                 }
 
                 // Update the execom with the new data
                 $execom->update($updateData);
 
-                return redirect(route('execom.list'))->with('success', 'Event updated successfully');
+                return redirect(route('execom.list'))->with('success', 'Execom updated successfully');
             } catch (\Throwable $th) {
-                return redirect(route('execom.list'))->with('error', 'Failed to update event: ' . $th->getMessage());
+                return redirect(route('execom.list'))->with('error', 'Failed to update execom: ' . $th->getMessage());
             }
         }
     }
