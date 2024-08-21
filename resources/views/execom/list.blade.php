@@ -54,9 +54,7 @@
                     <td>{{ $data->title }}</td>
                     <td class="truncate">{{ limitWords($data->description) }}</td>
                     <td>{{ $data->date }}</td>
-                    <td><img src="{{ asset('uploads/images/execom/' . $data->image1) }}" style="height: 100px" alt="" srcset=""></td>
-                    <td><img src="{{ asset('uploads/images/execom/' . $data->image2) }}" style="height: 100px" alt="" srcset=""></td>
-                    <td><img src="{{ asset('uploads/images/execom/' . $data->image3) }}" style="height: 100px" alt="" srcset=""></td>
+                    <td><img src="{{ asset('uploads/images/execom/' . $data->image) }}" style="height: 100px" alt="" srcset=""></td>
 
                     <td>
                         <div class="col">
@@ -67,7 +65,7 @@
                             accept-charset="UTF-8" style="display:inline">
                             {{ method_field('POST') }}
                             {{ csrf_field() }}
-                            <button type="submit" class="btn  p-2" title="Edit event"
+                            <button type="submit" class="btn  p-2" title="Edit execom"
                                 onclick="return confirm(&quot;Confirm edit?&quot;)">
                                 <span class=" mdi mdi-database-edit text-primary  fs-5"></span>
 
@@ -78,7 +76,7 @@
                                 accept-charset="UTF-8" style="display:inline">
                                 {{ method_field('POST') }}
                                 {{ csrf_field() }}
-                                <button type="submit" class="btn  p-2 " title="Delete event"
+                                <button type="submit" class="btn  p-2 " title="Delete execom"
                                     onclick="return confirm(&quot;Confirm delete?&quot;)">
                                     <span class=" mdi mdi-delete-empty-outline text-danger  fs-5" ></span>
 
