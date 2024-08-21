@@ -71,7 +71,7 @@
                         <label for="insta" class="form-label">Instagram: </label>
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" id="insta" name="isnta" placeholder="https://instagram.com/person"
+                        <input type="text" class="form-control" id="insta" name="insta" placeholder="https://instagram.com/person"
                             value="{{ old('insta') }}">
                         @error('insta')
                             <span class="text-danger">{{ $message }}</span>

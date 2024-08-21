@@ -42,6 +42,7 @@
                 <th>Name</th>
                 <th>Role</th>
                 <th>Image</th>
+                <th>Socials</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -50,23 +51,24 @@
                 <tr>
                     <td>{{ $data->name }}</td>
                     <td>{{ $data->title }}</td>
-                    <td><img src="{{ asset('uploads/images/execoms/' . $data->image) }}" style="height: 100px" alt="" srcset=""></td>
+                    <td><img src="{{ asset('uploads/images/execoms/' . $data->image) }}" style="height: 100px"
+                            alt="" srcset=""></td>
+                    <td>{{ $data->github }}<br>
+                        {{ $data->insta }}<br>
+                        {{ $data->linkedin }}<br>
+                    </td>
 
                     <td>
                         <div class="col">
-
-
-                            <form method="POST"
-                            action="{{ route('execom.edit', ['id' => $data->id]) }}"
-                            accept-charset="UTF-8" style="display:inline">
-                            {{ method_field('POST') }}
-                            {{ csrf_field() }}
-                            <button type="submit" class="btn  p-2" title="Edit execom"
-                                onclick="return confirm(&quot;Confirm edit?&quot;)">
-                                <span class=" mdi mdi-database-edit text-primary  fs-5"></span>
-
-                            </button>
-                        </form>
+                            <form method="POST" action="{{ route('execom.edit', ['id' => $data->id]) }}"
+                                accept-charset="UTF-8" style="display:inline">
+                                {{ method_field('POST') }}
+                                {{ csrf_field() }}
+                                <button type="submit" class="btn  p-2" title="Edit execom"
+                                    onclick="return confirm(&quot;Confirm edit?&quot;)">
+                                    <span class=" mdi mdi-database-edit text-primary  fs-5"></span>
+                                </button>
+                            </form>
 
                             <form method="POST" action="{{ route('execom.delete', ['id' => $data->id]) }}"
                                 accept-charset="UTF-8" style="display:inline">
@@ -74,8 +76,7 @@
                                 {{ csrf_field() }}
                                 <button type="submit" class="btn  p-2 " title="Delete execom"
                                     onclick="return confirm(&quot;Confirm delete?&quot;)">
-                                    <span class=" mdi mdi-delete-empty-outline text-danger  fs-5" ></span>
-
+                                    <span class=" mdi mdi-delete-empty-outline text-danger  fs-5"></span>
                                 </button>
                             </form>
                         </div>
