@@ -13,6 +13,8 @@ class Execom extends Model
         'name',
         'title',
         'image',
-        'github'
+        'github',
+        'insta',
+        'linkedin',
     ];
 }
