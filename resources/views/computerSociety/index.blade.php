@@ -90,6 +90,8 @@
           </div>
       @endfor
   </div>
+
+  @include('layouts.footer')
               
 {{-- /exicom section --}}
       
