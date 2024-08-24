@@ -89,7 +89,7 @@
                         </li>
 
                         <li class="nav-item {{ Route::currentRouteName() == 'execom.list' ? 'selected' : '' }}">
-                            <a class="nav-link text-light" onclick="" href="{{ route('execom.list') }}">Execom</a>
+                            <a class="nav-link text-light" onclick="" href="{{ route('execom.index') }}">Execom</a>
                         </li>
                         
                         <li class="nav-item {{ Route::currentRouteName() == 'achievements' ? 'selected' : '' }}">
