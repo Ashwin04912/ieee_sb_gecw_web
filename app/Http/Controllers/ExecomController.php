@@ -66,7 +66,7 @@ class ExecomController extends Controller
             return view('execom.edit', compact('execom'));
         }
     }
-    public function editSave(Request $request)
+    public function editsave(Request $request)
     {
         $data = $request->validate([
             'name' => 'required|string',
