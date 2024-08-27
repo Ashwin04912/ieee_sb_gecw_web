@@ -41,6 +41,8 @@
                 @enderror
             </div>
 
+            <input type="hidden" name="id" value="{{$execom->id}}" >
+
             <div class="mb-3">
                 <label for="image">Image</label>
                 <input type="file" class="form-control" id="image" name="image">

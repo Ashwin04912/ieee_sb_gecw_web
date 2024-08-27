@@ -60,13 +60,10 @@
 
                     <td>
                         <div class="col">
-                            <form method="POST" action="{{ route('execom.edit', ['id' => $data->id]) }}"
-                                accept-charset="UTF-8" style="display:inline">
-                                {{ method_field('POST') }}
+                            <form method="GET" action="{{ route('execom.edit', ['id' => $data->id]) }}" accept-charset="UTF-8" style="display:inline">
                                 {{ csrf_field() }}
-                                <button type="submit" class="btn  p-2" title="Edit execom"
-                                    onclick="return confirm(&quot;Confirm edit?&quot;)">
-                                    <span class=" mdi mdi-database-edit text-primary  fs-5"></span>
+                                <button type="submit" class="btn p-2" title="Edit execom" onclick="return confirm('Confirm edit?')">
+                                    <span class="mdi mdi-database-edit text-primary fs-5"></span>
                                 </button>
                             </form>
 
