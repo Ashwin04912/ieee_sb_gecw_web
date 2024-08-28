@@ -36,7 +36,7 @@ Route::post('/events/editsave', [EventsController::class, 'editSave'])->name('ev
     Route::get('/execom/list', [ExecomController::class, 'list'])->name('execom.list');
     Route::get('/execom/create', [ExecomController::class, 'create'])->name('execom.create');
     Route::post('/execom/store', [ExecomController::class, 'store'])->name('execom.store');
-    Route::post('/execom/edit/{id}', [ExecomController::class, 'edit'])->name('execom.edit');
+    route::get('/execom/edit/{id}', [ExecomController::class, 'edit'])->name('execom.edit');
     Route::post('/execom/delete/{id}', [ExecomController::class, 'delete'])->name('execom.delete');
     Route::post('/execom/editsave', [ExecomController::class, 'editSave'])->name('execom.editsave');
 

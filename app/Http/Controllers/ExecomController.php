@@ -69,49 +69,48 @@ class ExecomController extends Controller
     public function editSave(Request $request)
     {
         $data = $request->validate([
-            'name' => 'required|string',
-            'title' => 'required|string',
-            'id' => 'required|integer|exists:execoms,id', // Ensure the ID exists in the execoms table
+            'name' => 'string',
+            'title' => 'string',
+            'id' => 'integer|exists:execoms,id',
             'image' => 'nullable|mimes:png,jpg,jpeg',
             'github' => 'nullable|string',
             'insta' => 'nullable|string',
             'linkedin' => 'nullable|string',
         ]);
+        // dd($data);
+    
+        $id = $request->input('id');
 
-        $id = $request->post('id');
-
-
-        if ($data) {
-            try {
-                $execom = Execom::find($id);
-
-                // Prepare the data to be updated
-                $updateData = [
-                    'name' => $data['name'],
-                    'title' => $data['title'],
-                    'github' => $data['github'],
-                    'insta' => $data['insta'],
-                    'linkedin' => $data['linkedin'],
-                ];
-
-                // Handle image uploads
-                if ($request->hasFile('image')) {
-                    $image = $request->file('imageKey');
-                    $name = $request->string('name')->trim(" ");
-                    $imageName = time() . '_' . $name . '.' . $image->getClientOriginalExtension();
-                    $image->move(public_path('uploads/images/execoms'), $imageName);
-                    $updateData['image'] = $imageName;
-                }
-
-                // Update the execom with the new data
-                $execom->update($updateData);
-
-                return redirect(route('execom.list'))->with('success', 'Execom updated successfully');
-            } catch (\Throwable $th) {
-                return redirect(route('execom.list'))->with('error', 'Failed to update execom: ' . $th->getMessage());
+        // dd($id);
+    
+        try {
+            $execom = Execom::findOrFail($id);
+    
+            $updateData = [
+                'name' => $data['name'],
+                'title' => $data['title'],
+                'github' => $data['github'],
+                'insta' => $data['insta'],
+                'linkedin' => $data['linkedin'],
+            ];
+    // dd($updateData);
+            if ($request->hasFile('image')) {
+                $image = $request->file('image');
+                $name = $data['name'];
+                $imageName = time() . '_' . $name . '.' . $image->getClientOriginalExtension();
+                $image->move(public_path('uploads/images/execoms'), $imageName);
+                $updateData['image'] = $imageName;
             }
+    
+            $execom->update($updateData);
+    
+            return redirect()->route('execom.list')->with('success', 'Execom updated successfully');
+        } catch (\Throwable $th) {
+// dd($th);
+            return redirect()->route('execom.list')->with('error', 'Failed to update execom: ' . $th->getMessage());
         }
     }
+    
 
 
     public function delete($id)

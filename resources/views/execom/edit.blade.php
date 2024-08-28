@@ -24,53 +24,77 @@
             @endif
 
             <div class="mb-3">
-                <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" id="title" name="title" placeholder="Enter a title" value="{{ $event->title }}">
+                <label for="name" class="form-label">Name of the person</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder=""
+                    value="{{ $execom->name }}">
+                @error('name')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+            </div>
+
+            <div class="mb-3">
+                <label for="title" class="form-label">Execome role</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder=""
+                    value="{{ $execom->title }}">
                 @error('title')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
-            <input type="hidden" name="id" value="{{ $event->id }}">
+
+            <input type="hidden" name="id" value="{{$execom->id}}" >
+
             <div class="mb-3">
-                <label for="date" class="form-label">Event Date</label>
-                <input type="text" class="form-control" id="date" name="date" placeholder="17-04-2004" value="{{ $event->date }}">
-                @error('date')
+                <label for="image">Image</label>
+                <input type="file" class="form-control" id="image" name="image">
+                @error('image')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
 
+            <br>
             <div class="mb-3">
-                <label for="description" class="form-label">Description</label>
-                <textarea name="description" id="description" class="form-control" cols="30" rows="10" placeholder="Enter a description">{{ $event->description }}</textarea>
-                @error('description')
-                    <span class="text-danger">{{ $message }}</span>
-                @enderror
-            </div>
+                <label class="form-label">Social Media</label>
 
-            <div class="mb-3">
-                <label for="image1">First Image</label>
-                <input type="file" class="form-control" id="image1" name="image1">
-                @error('image1')
-                    <span class="text-danger">{{ $message }}</span>
-                @enderror
-            </div>
+                <div class="row">
+                    <div class="col-sm-1">
+                        <label for="github" class="form-label">Github: </label>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="github" name="github" placeholder="https://github.com/person"
+                            value="{{ $execom->github }}">
+                        @error('github')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-1">
+                        <label for="insta" class="form-label">Instagram: </label>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="insta" name="insta" placeholder="https://instagram.com/person"
+                            value="{{ $execom->insta }}">
+                        @error('insta')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-1">
+                        <label for="linkedin" class="form-label">Linkedin: </label>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/person"
+                            value="{{ $execom->linkedin }}">
+                        @error('linkedin')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+                </div>
 
-            <div class="mb-3">
-                <label for="image2">Second Image</label>
-                <input type="file" class="form-control" id="image2" name="image2">
-                @error('image2')
-                    <span class="text-danger">{{ $message }}</span>
-                @enderror
             </div>
-
-            <div class="mb-3">
-                <label for="image3">Third Image</label>
-                <input type="file" class="form-control" id="image3" name="image3">
-                @error('image3')
-                    <span class="text-danger">{{ $message }}</span>
-                @enderror
-            </div>
-
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 

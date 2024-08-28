@@ -9,6 +9,8 @@ class Execom extends Model
 {
     use HasFactory;
 
+    protected $table = 'execoms';
+
     protected $fillable = [
         'name',
         'title',
