@@ -70,6 +70,7 @@
                             <a class="nav-link text-light" onclick="$('.about_us')[0].focus()" href="#">About
                                 Us</a>
                         </li>
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-light" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -83,8 +84,8 @@
                                 <li><a class="dropdown-item" href="#">Sight</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item {{ Route::currentRouteName() == 'events.list' ? 'selected' : '' }}">
-                            <a class="nav-link text-light" href="{{ route('events.list') }}">Events</a>
+                        <li class="nav-item {{ Route::currentRouteName() == 'events.index' ? 'selected' : '' }}">
+                            <a class="nav-link text-light" href="{{ route('events.index') }}">Events</a>
                         </li>
 
                         <li class="nav-item {{ Route::currentRouteName() == 'execom.list' ? 'selected' : '' }}">
@@ -97,6 +98,19 @@
                         <li class="nav-item {{ Route::currentRouteName() == 'gallery.list' ? 'selected' : '' }}">
                             <a class="nav-link text-light" href="{{ route('gallery.list') }}">Gallery</a>
                         </li>
+<div class="pl-4" style="width: 30px"></div>
+                        {{-- logout button --}}
+                        @if (Route::is('dashboard'))
+                        <li class="nav-item">
+                            <form method="POST" action="{{ route('logout') }}" class="m-0">
+                                @csrf
+                                <button type="submit" class="logout-button">
+                                    {{ __('Log Out') }}
+                                </button>
+                            </form>
+                        </li>
+                    @endif
+                    
                         
                     </ul>
                 </div>
@@ -107,7 +121,6 @@
     <script src="{{asset('assets/js/navigation.js')}}"></script>
 
 
-  
 </body>
 
 </html>
