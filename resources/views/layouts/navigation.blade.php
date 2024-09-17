@@ -1,4 +1,4 @@
-{{-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -100,7 +100,7 @@
                         </li>
 <div class="pl-4" style="width: 30px"></div>
                         {{-- logout button --}}
-                        {{-- @if (Route::is('dashboard'))
+                        @if (Route::is('dashboard'))
                         <li class="nav-item">
                             <form method="POST" action="{{ route('logout') }}" class="m-0">
                                 @csrf
