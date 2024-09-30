@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="m-5 p-5">
+    <div class="m-5 pt-5">
         <h1 class="pt-5">EXECOM</h2>
             <hr>
 
