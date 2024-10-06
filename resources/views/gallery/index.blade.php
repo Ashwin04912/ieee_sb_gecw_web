@@ -16,25 +16,13 @@
 
     <div class="row mt-5">
         @php
-            // Array of image URLs
-            $images = [
-                'https://images.pexels.com/photos/1038914/pexels-photo-1038914.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-                'https://images.pexels.com/photos/1237119/pexels-photo-1237119.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-                'https://images.pexels.com/photos/1151118/pexels-photo-1151118.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-                'https://images.pexels.com/photos/129574/pexels-photo-129574.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-                'https://images.pexels.com/photos/1804391/pexels-photo-1804391.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-                'https://images.pexels.com/photos/2113566/pexels-photo-2113566.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-                'https://images.pexels.com/photos/267371/pexels-photo-267371.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-                'https://images.pexels.com/photos/352093/pexels-photo-352093.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-                'https://images.pexels.com/photos/411741/pexels-photo-411741.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-                'https://images.pexels.com/photos/610293/pexels-photo-610293.jpeg?auto=compress&cs=tinysrgb&h=650&w=940'
-            ];
+
         @endphp
 
-        @foreach ($images as $image)
+        @foreach ($datas as $data)
             <div class="col-lg-3 col-md-6 col-xs-12 thumb">
-                <a href="{{ $image }}" class="fancybox" rel="ligthbox">
-                    <img src="{{ $image }}" class="zoom img-fluid" alt="Image">
+                <a href="{{ asset('uploads/images/gallery/' . $data->image) }}" class="fancybox" rel="ligthbox">
+                    <img src="{{ asset('uploads/images/gallery/' . $data->image) }}" class="zoom img-fluid" alt="Image">
                 </a>
             </div>
         @endforeach
