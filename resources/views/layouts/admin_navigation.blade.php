@@ -64,7 +64,8 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav ms-auto me-4">
                         <li class="nav-item {{ Route::currentRouteName() == 'dashboard' ? 'selected' : '' }}">
-                            <a class="nav-link active text-light" aria-current="page" href="{{route('dashboard')}}">Home</a>
+                            <a class="nav-link active text-light" aria-current="page"
+                                href="{{ route('dashboard') }}">Home</a>
                         </li>
                         <li class="nav-item {{ Route::currentRouteName() == 'about.us' ? 'selected' : '' }}">
                             <a class="nav-link text-light" onclick="$('.about_us')[0].focus()" href="#">About
@@ -77,10 +78,12 @@
                                 Societies
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item {{ Route::currentRouteName() == 'computer'? 'selected' : ''}}" href="{{route('computer')}}">Computer Society</a></li>
+                                <li><a class="dropdown-item {{ Route::currentRouteName() == 'computer' ? 'selected' : '' }}"
+                                        href="{{ route('computer') }}">Computer Society</a></li>
                                 <li><a class="dropdown-item" href="#">Women In Engineering</a></li>
                                 <li><a class="dropdown-item" href="#">Antennas and Propagation Society</a></li>
-                                <li><a class="dropdown-item" href="#">Microwave Theory and Technology Society</a></li>
+                                <li><a class="dropdown-item" href="#">Microwave Theory and Technology
+                                        Society</a></li>
                                 <li><a class="dropdown-item" href="#">Sight</a></li>
                             </ul>
                         </li>
@@ -89,36 +92,37 @@
                         </li>
 
                         <li class="nav-item {{ Route::currentRouteName() == 'execom.list' ? 'selected' : '' }}">
-                            <a class="nav-link text-light" onclick="" href="{{ route('execom.list') }}">Execom</a>
+                            <a class="nav-link text-light" onclick=""
+                                href="{{ route('execom.list') }}">Execom</a>
                         </li>
-                        
+
                         <li class="nav-item {{ Route::currentRouteName() == 'achievements' ? 'selected' : '' }}">
                             <a class="nav-link text-light" href="{{ route('achievements') }}">Achievements</a>
                         </li>
                         <li class="nav-item {{ Route::currentRouteName() == 'gallery.list' ? 'selected' : '' }}">
                             <a class="nav-link text-light" href="{{ route('gallery.list') }}">Gallery</a>
                         </li>
-<div class="pl-4" style="width: 30px"></div>
+                        <div class="pl-4" style="width: 30px"></div>
                         {{-- logout button --}}
                         @if (Route::is('dashboard'))
-                        <li class="nav-item">
-                            <form method="POST" action="{{ route('logout') }}" class="m-0">
-                                @csrf
-                                <button type="submit" class="logout-button">
-                                    {{ __('Log Out') }}
-                                </button>
-                            </form>
-                        </li>
-                    @endif
-                    
-                        
+                            <li class="nav-item">
+                                <form method="POST" action="{{ route('logout') }}" class="m-0">
+                                    @csrf
+                                    <button type="submit" class="logout-button">
+                                        {{ __('Log Out') }}
+                                    </button>
+                                </form>
+                            </li>
+                        @endif
+
+
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
 
-    <script src="{{asset('assets/js/navigation.js')}}"></script>
+    <script src="{{ asset('assets/js/navigation.js') }}"></script>
 
 
 </body>

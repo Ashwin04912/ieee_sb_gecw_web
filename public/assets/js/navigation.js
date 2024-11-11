@@ -29,3 +29,18 @@ $(document).ready(function () {
         }
     });
 });
+//de-bugging
+$('a[href^="#"]').on('click', function(event) {
+    var href = this.getAttribute('href');
+    console.log('Clicked href:', href); // Log the href value
+    var targetId = href.substring(1); // Remove the '#'
+    console.log('Target ID:', targetId); // Log the target ID
+    var target = $('#' + targetId); // Find the target element
+    console.log('Target element:', target); // Log the target element
+    if (target.length && targetId !== '') {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+});

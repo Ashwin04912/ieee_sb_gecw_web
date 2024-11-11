@@ -41,15 +41,15 @@
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img class="d-block w-100" style="height: 393px; object-fit: contain;"
+                                    <img class="d-block w-100" style="height: 393px; object-fit: cover;"
                                         src="{{ asset('uploads/images/events/' . $data->image1) }}" alt="First slide">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100" style="height: 393px; object-fit: contain;"
+                                    <img class="d-block w-100" style="height: 393px; object-fit: cover;"
                                         src="{{ asset('uploads/images/events/' . $data->image2) }}" alt="Second slide">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100" style="height: 393px; object-fit: contain;"
+                                    <img class="d-block w-100" style="height: 393px; object-fit: cover;"
                                         src="{{ asset('uploads/images/events/' . $data->image3) }}" alt="Third slide">
                                 </div>
                             </div>
