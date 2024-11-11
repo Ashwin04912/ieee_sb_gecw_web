@@ -57,6 +57,6 @@ Route::get('/events', [EventsController::class, 'index'])->name('events.index');
 Route::get('/achievements', [AchieveController::class, 'index'])->name('achievements');
 Route::get('/computer', [ComputerController::class, 'index'])->name('computer');
 Route::get('/execom', [ExecomController::class, 'index'])->name('execom.index');
-Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.list');
+Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
 
 require __DIR__ . '/auth.php';
