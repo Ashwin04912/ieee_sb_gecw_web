@@ -40,13 +40,21 @@ Route::middleware('auth')->group(function () {
     Route::post('/execom/editsave', [ExecomController::class, 'editSave'])->name('execom.editsave');
 
     // Gallery
-    Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
+    // Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
     Route::get('/gallery/list', [GalleryController::class, 'list'])->name('gallery.list');
     Route::get('/gallery/create', [GalleryController::class, 'create'])->name('gallery.create');
     Route::post('/gallery/store', [GalleryController::class, 'store'])->name('gallery.store');
     Route::get('/gallery/edit/{id}', [GalleryController::class, 'edit'])->name('gallery.edit');
     Route::post('/gallery/delete/{id}', [GalleryController::class, 'delete'])->name('gallery.delete');
     Route::post('/gallery/editsave', [GalleryController::class, 'editSave'])->name('gallery.editsave');
+
+    Route::get('/achievements/list', [AchieveController::class, 'list'])->name('achievements.list');
+    Route::get('/achievements/create', [AchieveController::class, 'create'])->name('achievements.create');
+    Route::post('/achievements/store', [AchieveController::class, 'store'])->name('achievements.store');
+    Route::get('/achievements/edit/{id}', [AchieveController::class, 'edit'])->name('achievements.edit');
+    Route::post('/achievements/delete/{id}', [AchieveController::class, 'delete'])->name('achievements.delete');
+    Route::post('/achievements/editsave', [AchieveController::class, 'editSave'])->name('achievements.editsave');
+
 });
 
 

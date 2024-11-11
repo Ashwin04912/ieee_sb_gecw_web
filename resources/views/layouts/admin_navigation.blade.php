@@ -96,8 +96,8 @@
                                 href="{{ route('execom.list') }}">Execom</a>
                         </li>
 
-                        <li class="nav-item {{ Route::currentRouteName() == 'achievements' ? 'selected' : '' }}">
-                            <a class="nav-link text-light" href="{{ route('achievements') }}">Achievements</a>
+                        <li class="nav-item {{ Route::currentRouteName() == 'achievements.list' ? 'selected' : '' }}">
+                            <a class="nav-link text-light" href="{{ route('achievements.list') }}">Achievements</a>
                         </li>
                         <li class="nav-item {{ Route::currentRouteName() == 'gallery.list' ? 'selected' : '' }}">
                             <a class="nav-link text-light" href="{{ route('gallery.list') }}">Gallery</a>

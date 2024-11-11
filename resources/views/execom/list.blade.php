@@ -15,15 +15,8 @@
     }
 @endphp
 
-
-
 <div class="container-fluid p-5" style="width: 85%; position: relative;">
     <!-- Add New Button -->
-
-
-
-
-
     <div class="button-container pb-5">
         <a href="{{ route('execom.create') }}" class="btn btn-primary">Add New</a>
     </div>
@@ -33,8 +26,6 @@
             {{ session()->get('success') }}
         </div>
     @endif
-
-
 
     <table id="example" class="display">
         <thead>
@@ -51,29 +42,25 @@
                 <tr>
                     <td>{{ $data->name }}</td>
                     <td>{{ $data->title }}</td>
-                    <td><img src="{{ asset('uploads/images/execoms/' . $data->image) }}" style="height: 100px"
-                            alt="" srcset=""></td>
-                    <td>{{ $data->github }}<br>
+                    <td><img src="{{ asset('uploads/images/execoms/' . $data->image) }}" style="height: 100px" alt=""></td>
+                    <td>
+                        {{ $data->github }}<br>
                         {{ $data->insta }}<br>
                         {{ $data->linkedin }}<br>
                     </td>
-
                     <td>
-                        <div class="col">
-                            <form method="GET" action="{{ route('execom.edit', ['id' => $data->id]) }}" accept-charset="UTF-8" style="display:inline">
-                                {{ csrf_field() }}
+                        <div class="d-flex">
+                            <form method="GET" action="{{ route('execom.edit', ['id' => $data->id]) }}" style="display:inline">
+                                @csrf
                                 <button type="submit" class="btn p-2" title="Edit execom" onclick="return confirm('Confirm edit?')">
                                     <span class="mdi mdi-database-edit text-primary fs-5"></span>
                                 </button>
                             </form>
 
-                            <form method="POST" action="{{ route('execom.delete', ['id' => $data->id]) }}"
-                                accept-charset="UTF-8" style="display:inline">
-                                {{ method_field('POST') }}
-                                {{ csrf_field() }}
-                                <button type="submit" class="btn  p-2 " title="Delete execom"
-                                    onclick="return confirm(&quot;Confirm delete?&quot;)">
-                                    <span class=" mdi mdi-delete-empty-outline text-danger  fs-5"></span>
+                            <form method="POST" action="{{ route('execom.delete', ['id' => $data->id]) }}" style="display:inline">
+                                @csrf
+                                <button type="submit" class="btn p-2" title="Delete execom" onclick="return confirm('Confirm delete?')">
+                                    <span class="mdi mdi-delete-empty-outline text-danger fs-5"></span>
                                 </button>
                             </form>
                         </div>
@@ -82,7 +69,6 @@
             @endforeach
         </tbody>
     </table>
-
 </div>
 
 <!-- Include jQuery -->
@@ -101,6 +87,5 @@
     .button-container {
         position: relative;
         z-index: 1000;
-        /* Ensure it is above other elements */
     }
 </style>
