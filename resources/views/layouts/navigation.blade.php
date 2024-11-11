@@ -91,14 +91,14 @@
                         <li class="nav-item {{ Route::currentRouteName() == 'execom.list' ? 'selected' : '' }}">
                             <a class="nav-link text-light" onclick="" href="{{ route('execom.index') }}">Execom</a>
                         </li>
-                        
-                        <li class="nav-item {{ Route::currentRouteName() == 'achievements' ? 'selected' : '' }}">
+
+                        <!-- <li class="nav-item {{ Route::currentRouteName() == 'achievements' ? 'selected' : '' }}">
                             <a class="nav-link text-light" href="{{ route('achievements') }}">Achievements</a>
+                        </li> -->
+                        <li class="nav-item {{ Route::currentRouteName() == 'gallery.index' ? 'selected' : '' }}">
+                            <a class="nav-link text-light" href="{{ route('gallery.index') }}">Gallery</a>
                         </li>
-                        <li class="nav-item {{ Route::currentRouteName() == 'gallery.list' ? 'selected' : '' }}">
-                            <a class="nav-link text-light" href="{{ route('gallery.list') }}">Gallery</a>
-                        </li>
-<div class="pl-4" style="width: 30px"></div>
+                        <div class="pl-4" style="width: 30px"></div>
                         {{-- logout button --}}
                         @if (Route::is('dashboard'))
                         <li class="nav-item">
@@ -109,9 +109,9 @@
                                 </button>
                             </form>
                         </li>
-                    @endif
-                    
-                        
+                        @endif
+
+
                     </ul>
                 </div>
             </div>

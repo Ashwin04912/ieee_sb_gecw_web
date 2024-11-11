@@ -10,7 +10,8 @@ class AchieveController extends Controller
 {
     public function index()
     {
-        return view('achievements.index');
+        $datas = Achievement::all();
+        return view('achievements.index',compact('datas'));
     }
 
     public function list()
