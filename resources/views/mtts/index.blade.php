@@ -12,7 +12,7 @@
     </div>
     <div class="container text-center">
       <div class="d-flex flex-column justify-content-center align-items-center">
-        <h1 data-aos="fade-up">Welcome to <span>Computer societies</span></h1>
+        <h1 data-aos="fade-up">Welcome to <span>Microwave Theory and Technology Society</span></h1>
         <p data-aos="fade-up" data-aos-delay="100">Quickly start your project now and set the stage for
           success<br></p>
         <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
@@ -29,7 +29,7 @@
           <!-- Left Side: Image -->
           <div class="col-md-6 col-12 mb-4 mb-md-0">
             <div class="img-box text-center">
-              <img src="{{ asset('assets/images/IEEE-CS_LogoTM_black.png') }}" alt="CSGECW Logo" class="img-fluid custom-logo">
+              <img src="{{ asset('/assets/images/mtts_logo.png') }}" alt="CSGECW Logo" class="img-fluid custom-logo">
             </div>
           </div>
           <!-- Right Side: About Us Text -->

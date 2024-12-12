@@ -35,10 +35,11 @@ class ExecomController extends Controller
         $data = $request->validate([
             'name' => 'required|string',
             'title' => 'required|string|',
+            'society' => 'nullable|string|',
             'image' => 'required|mimes:png,jpg,jpeg',
-            'github' => 'string',
-            'insta' => 'string',
-            'linkedin' => 'string',
+            'github' => 'nullable|string',
+            'insta' => 'nullable|string',
+            'linkedin' => 'nullable|string',
         ]);
 
         // Handle image uploads
@@ -71,6 +72,7 @@ class ExecomController extends Controller
         $data = $request->validate([
             'name' => 'string',
             'title' => 'string',
+            'society' => 'nullable|string',
             'id' => 'integer|exists:execoms,id',
             'image' => 'nullable|mimes:png,jpg,jpeg',
             'github' => 'nullable|string',
@@ -89,6 +91,7 @@ class ExecomController extends Controller
             $updateData = [
                 'name' => $data['name'],
                 'title' => $data['title'],
+                'society' => 'nullable|string',
                 'github' => $data['github'],
                 'insta' => $data['insta'],
                 'linkedin' => $data['linkedin'],

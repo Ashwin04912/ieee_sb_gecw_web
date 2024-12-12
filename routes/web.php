@@ -3,13 +3,17 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AchieveController;
+use App\Http\Controllers\ApsController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\ComputerController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\ExecomController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MttsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SightController;
+use App\Http\Controllers\WieController;
 
 // Admin page routes
 Route::get('/admin', function () {
@@ -63,8 +67,15 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about-us', [AboutController::class, 'index'])->name('about.us');
 Route::get('/events', [EventsController::class, 'index'])->name('events.index');
 Route::get('/achievements', [AchieveController::class, 'index'])->name('achievements');
-Route::get('/computer', [ComputerController::class, 'index'])->name('computer');
 Route::get('/execom', [ExecomController::class, 'index'])->name('execom.index');
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
+// societies
+Route::get('/computer', [ComputerController::class, 'index'])->name('computer');
+Route::get('/wie', [WieController::class, 'index'])->name('wie.index');
+Route::get('/sight', [SightController::class, 'index'])->name('sight.index');
+Route::get('/aps', [ApsController::class, 'index'])->name('aps.index');
+Route::get('/mtts', [MttsController::class, 'index'])->name('mtts.index');
+// societies end
+
 
 require __DIR__ . '/auth.php';

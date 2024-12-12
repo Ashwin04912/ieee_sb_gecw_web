@@ -14,6 +14,7 @@ class Execom extends Model
     protected $fillable = [
         'name',
         'title',
+        'society',
         'image',
         'github',
         'insta',
