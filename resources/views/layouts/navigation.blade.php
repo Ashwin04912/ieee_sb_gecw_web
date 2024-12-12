@@ -64,39 +64,44 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav ms-auto me-4">
                         <li class="nav-item {{ Route::currentRouteName() == 'home' ? 'selected' : '' }}">
-                            <a class="nav-link active text-light" aria-current="page" href="#top">Home</a>
+                            <a class="nav-link active text-light" aria-current="page" href="{{ route('home') }}"><span class="name">Home</span></a>
                         </li>
-                        <li class="nav-item {{ Route::currentRouteName() == 'about.us' ? 'selected' : '' }}">
+                        <!-- <li class="nav-item {{ Route::currentRouteName() == 'about.us' ? 'selected' : '' }}">
                             <a class="nav-link text-light" onclick="$('.about_us')[0].focus()" href="#">About
                                 Us</a>
-                        </li>
+                        </li> -->
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Societies
+                            <a class="nav-link dropdown-toggle text-light d-flex align-items-center {{ in_array(Route::currentRouteName(), ['computer', 'wie.index', 'aps.index', 'mtts.index', 'sight.index']) ? 'selected' : '' }}"
+                                href="#"
+                                data-bs-toggle="dropdown"
+                                role="button"
+                                aria-expanded="false">
+                                <span class="name">Societies</span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item {{ Route::currentRouteName() == 'computer'? 'selected' : ''}}" href="{{route('computer')}}">Computer Society</a></li>
-                                <li><a class="dropdown-item {{ Route::currentRouteName() == 'wie.index'? 'selected' : ''}}" href="{{route('wie.index')}}">Women In Engineering</a></li>
-                                <li><a class="dropdown-item" href="{{route('aps.index')}}">Antennas and Propagation Society</a></li>
-                                <li><a class="dropdown-item" href="{{route('mtts.index')}}">Microwave Theory and Technology Society</a></li>
-                                <li><a class="dropdown-item" href="{{route('sight.index')}}">Sight</a></li>
+                                <li><a class="dropdown-item {{ Route::currentRouteName() == 'computer' ? 'selected' : '' }}" href="{{route('computer')}}">Computer Society</a></li>
+                                <li><a class="dropdown-item {{ Route::currentRouteName() == 'wie.index' ? 'selected' : '' }}" href="{{route('wie.index')}}">Women In Engineering</a></li>
+                                <li><a class="dropdown-item {{ Route::currentRouteName() == 'aps.index' ? 'selected' : '' }}" href="{{route('aps.index')}}">Antennas and Propagation Society</a></li>
+                                <li><a class="dropdown-item {{ Route::currentRouteName() == 'mtts.index' ? 'selected' : '' }}" href="{{route('mtts.index')}}">Microwave Theory and Technology Society</a></li>
+                                <li><a class="dropdown-item {{ Route::currentRouteName() == 'sight.index' ? 'selected' : '' }}" href="{{route('sight.index')}}">Sight</a></li>
                             </ul>
                         </li>
+
+
                         <li class="nav-item {{ Route::currentRouteName() == 'events.index' ? 'selected' : '' }}">
-                            <a class="nav-link text-light" href="{{ route('events.index') }}">Events</a>
+                            <a class="nav-link text-light" href="{{ route('events.index') }}"><span class="name">Events</span></a>
                         </li>
 
-                        <li class="nav-item {{ Route::currentRouteName() == 'execom.list' ? 'selected' : '' }}">
-                            <a class="nav-link text-light" onclick="" href="{{ route('execom.index') }}">Execom</a>
+                        <li class="nav-item {{ Route::currentRouteName() == 'execom.index' ? 'selected' : '' }}">
+                            <a class="nav-link text-light" onclick="" href="{{ route('execom.index') }}"><span class="name">Execom</span></a>
                         </li>
 
                         <!-- <li class="nav-item {{ Route::currentRouteName() == 'achievements' ? 'selected' : '' }}">
                             <a class="nav-link text-light" href="{{ route('achievements') }}">Achievements</a>
                         </li> -->
                         <li class="nav-item {{ Route::currentRouteName() == 'gallery.index' ? 'selected' : '' }}">
-                            <a class="nav-link text-light" href="{{ route('gallery.index') }}">Gallery</a>
+                            <a class="nav-link text-light" href="{{ route('gallery.index') }}"><span class="name">Gallery</span></a>
                         </li>
                         <div class="pl-4" style="width: 30px"></div>
                         {{-- logout button --}}

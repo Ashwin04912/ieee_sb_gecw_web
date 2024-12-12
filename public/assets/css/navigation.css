@@ -2,6 +2,10 @@
     margin-top: -20px !important;
 }
 
+.name{
+    font-size: 20px;
+}
+
 .navbar-nav .nav-link:hover {
     color: #ff0000 !important;
     /* Change this to your desired hover color */
@@ -19,8 +23,23 @@
     color: blue !important;
     /* Text color for selected item */
     font-weight: bold;
+    text-decoration: underline;
+
     /* Make text bold */
 }
+/* Define the selected class */
+.nav-link.selected {
+    color: blue !important; /* Set text color to blue */
+    font-weight: bold; /* Optional: make it bold for better visibility */
+    text-decoration: underline; /* Optional: add an underline effect */
+  }
+  
+  /* Ensure dropdown item styling matches */
+  .dropdown-item.selected {
+    color: blue !important; /* Make the selected dropdown item blue */
+    font-weight: bold; /* Optional */
+  }
+  
 
 /* Custom selection color specifically for the navbar */
 .navbar ::selection {
