@@ -50,6 +50,23 @@
 
         {{-- @include('layouts.footer') --}}
     </div>
+
+    <script>
+         $(document).ready(function() {
+            // Initialize AOS
+            AOS.init({
+                duration: 1200,  // Animation duration
+                easing: 'ease-in-out',  // Easing function
+                once: true  // Trigger animation only once as the element comes into view
+            });
+
+            // Hide the preloader when the page is loaded
+            window.addEventListener('load', function() {
+                const preloader = document.getElementById('preloader');
+                preloader.style.display = 'none'; // Hide the preloader
+            });
+        });
+    </script>
 </body>
 
 <head>
@@ -88,6 +105,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <script src="{{asset('assets/js/gallery.js')}}"></script>
+
+
 
     
       
