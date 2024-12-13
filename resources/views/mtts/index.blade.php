@@ -62,7 +62,7 @@
         @foreach ($datas as $data)
         <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center mb-4">
           <div class="profile-card text-center">
-            <img src="{{ asset('uploads/images/execoms/' . $data->image) }}" alt="Profile Image"
+            <img src="{{ asset('uploads/images/mttsexecoms/' . $data->image) }}" alt="Profile Image"
               class="img-fluid">
             <div class="card-body">
               <h5 class="card-title">{{ $data->name }}</h5>

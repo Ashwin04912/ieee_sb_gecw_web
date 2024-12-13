@@ -1,7 +1,7 @@
 @include('layouts.admin_navigation')
 <!-- Include DataTables CSS -->
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-<link rel="stylesheet" href="https://cdn.materialdesignicons.com/6.4.95/css/materialdesignicons.min.css">
+<!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"> -->
+    
 
 @php
     function limitWords($text, $limit = 10)
@@ -68,7 +68,8 @@
                             {{ method_field('POST') }}
                             {{ csrf_field() }}
                             <button type="submit" class="btn  p-2" title="Edit event"
-                                onclick="return confirm(&quot;Confirm edit?&quot;)">
+                            onclick="return confirm('Confirm edit?')"
+                            >
                                 <span class=" mdi mdi-database-edit text-primary  fs-5"></span>
 
                             </button>
@@ -79,7 +80,8 @@
                                 {{ method_field('POST') }}
                                 {{ csrf_field() }}
                                 <button type="submit" class="btn  p-2 " title="Delete event"
-                                    onclick="return confirm(&quot;Confirm delete?&quot;)">
+                                onclick="return confirm('Confirm delete?')">
+
                                     <span class=" mdi mdi-delete-empty-outline text-danger  fs-5" ></span>
 
                                 </button>
