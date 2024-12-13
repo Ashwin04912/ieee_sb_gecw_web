@@ -4,9 +4,9 @@
     <div class="m-5 pt-5">
         <h1 class="pt-5">EXECOM</h2>
             <hr>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center p-4 m-5">
                 @foreach ($datas as $data)
-                    <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center mb-4">
+                    <div class="col-lg-4 col-md-4 col-sm-6 d-flex justify-content-center mb-4">
                         <div class="profile-card text-center">
                             <img src="{{ asset('uploads/images/execoms/' . $data->image) }}" alt="Profile Image"
                                 class="img-fluid">
