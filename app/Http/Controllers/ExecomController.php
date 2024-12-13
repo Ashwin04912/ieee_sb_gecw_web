@@ -6,8 +6,7 @@ use App\Models\Execom;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Exception;
-use Illuminate\Contracts\Cache\Store;
-use Illuminate\Support\Facades\Storage;
+
 
 class ExecomController extends Controller
 {

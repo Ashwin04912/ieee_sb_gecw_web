@@ -11,7 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-    <title>Document</title>
+    <title>ieeesbgecw</title>
 </head>
 
 <body data-route-name="{{ Route::currentRouteName() }}">
@@ -125,7 +125,9 @@
 
     <script src="{{asset('assets/js/navigation.js')}}"></script>
 
-
 </body>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
 </html>

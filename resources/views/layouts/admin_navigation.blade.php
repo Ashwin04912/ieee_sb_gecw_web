@@ -67,10 +67,10 @@
                             <a class="nav-link active text-light" aria-current="page"
                                 href="{{ route('dashboard') }}">Home</a>
                         </li>
-                        <li class="nav-item {{ Route::currentRouteName() == 'about.us' ? 'selected' : '' }}">
+                        <!-- <li class="nav-item {{ Route::currentRouteName() == 'about.us' ? 'selected' : '' }}">
                             <a class="nav-link text-light" onclick="$('.about_us')[0].focus()" href="#">About
                                 Us</a>
-                        </li>
+                        </li> -->
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-light" href="#" role="button"
@@ -78,13 +78,13 @@
                                 Societies
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item {{ Route::currentRouteName() == 'computer' ? 'selected' : '' }}"
-                                        href="{{ route('computer') }}">Computer Society</a></li>
-                                <li><a class="dropdown-item" href="#">Women In Engineering</a></li>
-                                <li><a class="dropdown-item" href="#">Antennas and Propagation Society</a></li>
-                                <li><a class="dropdown-item" href="#">Microwave Theory and Technology
+                                <li><a class="dropdown-item {{ Route::currentRouteName() == 'computerexecom.list' ? 'selected' : '' }}"
+                                        href="{{ route('computerexecom.list') }}">Computer Society</a></li>
+                                <li><a class="dropdown-item" href="{{ route('wieexecom.list') }}">Women In Engineering</a></li>
+                                <li><a class="dropdown-item" href="{{ route('apsexecom.list') }}">Antennas and Propagation Society</a></li>
+                                <li><a class="dropdown-item" href="{{ route('mttsexecom.list') }}">Microwave Theory and Technology
                                         Society</a></li>
-                                <li><a class="dropdown-item" href="#">Sight</a></li>
+                                <li><a class="dropdown-item" href="{{ route('sightexecom.list') }}">Sight</a></li>
                             </ul>
                         </li>
                         <li class="nav-item {{ Route::currentRouteName() == 'events.list' ? 'selected' : '' }}">
@@ -123,6 +123,9 @@
     </nav>
 
     <script src="{{ asset('assets/js/navigation.js') }}"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/6.4.95/css/materialdesignicons.min.css">
 
 
 </body>

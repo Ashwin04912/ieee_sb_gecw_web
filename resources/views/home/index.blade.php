@@ -2,13 +2,8 @@
 @section('content')
     
 
-    <section class="bsb-hero-5 bsb-overlay img-fluid  position-relative home" id="top"
-        style="background-image: url('{{ asset('assets/images/dummy-bg.jpg') }}'); height :104vh; background-attachment: fixed; background-size: cover">
-
-
-        {{-- @extends('layouts.navigation') --}}
-
-        <div class="container">
+<x-background_home_image image="assets/images/dummy-bg.jpg">
+<div class="container">
             <div class="row justify-content-md-center align-items-center" >
                 <div class="col-12 col-md-11 col-lg-9 col-xl-8 col-xxl-7">
                     <h2 class="display-1 text-white text-center fw-bold mb-4">Dream of Success</h2>
@@ -23,6 +18,12 @@
                 </div>
             </div>
         </div>
+</x-background_home_image>
+
+
+        {{-- @extends('layouts.navigation') --}}
+
+ 
 
 
     </section>

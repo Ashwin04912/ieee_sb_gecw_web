@@ -1,8 +1,8 @@
 @include('layouts.admin_navigation')
 <!-- Include DataTables CSS -->
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-<link rel="stylesheet" href="https://cdn.materialdesignicons.com/6.4.95/css/materialdesignicons.min.css">
-
+<!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"> -->
+<!-- <link rel="stylesheet" href="https://cdn.materialdesignicons.com/6.4.95/css/materialdesignicons.min.css"> -->
+<!-- 
 @php
     function limitWords($text, $limit = 10)
     {
@@ -13,7 +13,7 @@
         }
         return $text;
     }
-@endphp
+@endphp -->
 
 <div class="container-fluid p-5" style="width: 85%; position: relative;">
     <!-- Add New Button -->
@@ -89,3 +89,5 @@
         z-index: 1000;
     }
 </style>
+
+

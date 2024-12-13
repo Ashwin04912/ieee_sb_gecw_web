@@ -1,76 +1,64 @@
-<footer class="text-white text-center text-lg-start" style="background-color: #23242a;">
-    <!-- Grid container -->
-    <div class="container p-4">
-        <!--Grid row-->
-        <div class="row mt-4">
-            <!--Grid column-->
-            <div class="col-lg-5 col-md-12 mb-4 mb-md-0">
-                <h5 class="text mb-4">IEEE SB GECW</h5>
-                <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                    voluptatum deleniti atque corrupti.
+<footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+        <div class="row">
+            <!-- About Section -->
+            <div class="col-md-4">
+                <h5 class="text-uppercase mb-3">About Us</h5>
+                <p class="small">
+                    We are dedicated to advancing technology for humanity. Join us in our mission to create innovative solutions that make a difference.
                 </p>
             </div>
-            <!--Grid column-->
 
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text mb-4">Contact Us</h5>
-                <ul class="fa-ul" style="margin-left: 1.65em;">
-                    <li class="mb-3">
-                        <span class="fa-li"><i class="fas fa-location-dot"></i></span>
-                        <span class="ms-2">
-                            <a href="https://maps.app.goo.gl/nicoo6Cz1wppTm2Z9"
-                                style="color:white;text-decoration:none">Thalapuzha, 670644, Kerala</a>
-                        </span>
-                    </li>
-                    <li class="mb-3">
-                        <span class="fa-li"><i class="fas fa-envelope"></i></span>
-                        <span class="ms-2">ieeesb@gecwyd.ac.in</span>
-                    </li>
-                    <li class="mb-3">
-                        <span class="fa-li"><i class="fas fa-phone"></i></span>
-                        <span class="ms-2">+ 01 234 567 88</span>
-                    </li>
+            <!-- Navigation Links -->
+            <div class="col-md-4">
+                <h5 class="text-uppercase mb-3">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Events</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
                 </ul>
             </div>
-            <!--Grid column-->
 
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text mb-4">Quick Links</h5>
-                <ul class="fa-ul" style="margin-left: 1.65em;">
-                    <li class="mb-3">
-                        <span class="fa-li"><i>-</i></span>
-                        <span class="ms-2">
-                            <a href="" style="color:white;text-decoration:none">Gallery</a>
-                        </span>
-                    </li>
-                    <li class="mb-3">
-                        <span class="fa-li"><i>-</i></span>
-                        <span class="ms-2">
-                            <a href="" style="color:white;text-decoration:none">Events</a>
-                        </span>
-                    </li>
-                    <li class="mb-3">
-                        <span class="fa-li"><i>-</i></span>
-                        <span class="ms-2">
-                            <a href="" style="color:white;text-decoration:none">About Us</a>
-                        </span>
-                    </li>
-                </ul>
+            <!-- Contact Section -->
+            <div class="col-md-4">
+                <h5 class="text-uppercase mb-3">Contact Us</h5>
+                <p class="small mb-2"><i class="bi bi-envelope"></i> email@example.com</p>
+                <p class="small mb-2"><i class="bi bi-phone"></i> +123 456 7890</p>
+                <p class="small"><i class="bi bi-geo-alt"></i> 123 Tech Street, Innovation City</p>
+                <div class="d-flex mt-3">
+                    <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                </div>
             </div>
-            <!--Grid column-->
         </div>
-        <!--Grid row-->
-    </div>
-    <!-- Grid container -->
-
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        Designed and Developed by:
-        <a class="text-white" href="https://github.com/Ashwin04912/ieee_sb_gecw_web" style="text-decoration:none">
-            Team Codia
-        </a>
+        <hr class="bg-light">
+        <div class="row">
+            <div class="col text-center">
+                <p class="small m-0">&copy; {{ date('Y') }} IEEE SB GECW. All rights reserved.</p>
+            </div>
+        </div>
     </div>
 </footer>
+
+
+<style>
+    footer {
+    font-size: 14px;
+}
+
+footer .bi {
+    font-size: 18px;
+}
+
+footer .text-white:hover {
+    color: #007bff !important; /* Highlight link hover */
+}
+
+footer hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+</style>
