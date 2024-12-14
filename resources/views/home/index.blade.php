@@ -89,23 +89,28 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ asset('assets/images/mtts_logo.png') }}" class="img-fluid image-container" alt="MTTS Logo">
+            <a href="{{route('mtts.index')}}"> <img src="{{ asset('assets/images/mtts_logo.png') }}" class="img-fluid image-container" alt="MTTS Logo"></a>
+           
         </div>
 
         <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ asset('assets/images/csociety_logo.png') }}" class="img-fluid image-container" alt="CSociety Logo">
+            <a href="{{route('computer')}}"><img src="{{ asset('assets/images/csociety_logo.png') }}" class="img-fluid image-container" alt="CSociety Logo"></a>
+            
         </div>
 
         <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ asset('assets/images/aps_logo.png') }}" class="img-fluid image-container p-5" alt="APS Logo">
+            <a href="{{route('aps.index')}}"> <img src="{{ asset('assets/images/aps_logo.png') }}" class="img-fluid image-container p-5" alt="APS Logo"></a>
+           
         </div>
 
         <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ asset('assets/images/wie_logo.png') }}" class="img-fluid image-container p-5" alt="WIE Logo">
+            <a href="{{route('wie.index')}}"><img src="{{ asset('assets/images/wie_logo.png') }}" class="img-fluid image-container p-5" alt="WIE Logo"></a>
+            
         </div>
 
         <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ asset('assets/images/sight_logo.png') }}" class="img-fluid image-container p-3" alt="SIGHT Logo">
+            <a href="{{route('sight.index')}}"><img src="{{ asset('assets/images/sight_logo.png') }}" class="img-fluid image-container p-3" alt="SIGHT Logo"></a>
+            
         </div>
     </div>
 </div>
