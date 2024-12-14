@@ -29,22 +29,21 @@
                     <div class="col-md-6 col-12 mb-4 mb-md-0">
                         <div class="img-box text-center">
                             <img src="{{ asset('/assets/images/sight_logo.png') }}" alt="CSGECW Logo" class="img-fluid custom-logo">
-                           
+
                         </div>
                     </div>
                     <!-- Right Side: About Us Text -->
                     <div class="col-md-6 col-12">
                         <div class="detail-box">
-                            <h2>About <span>Us</span></h2>
+                            <h2 class="mb-3">
+                                About <span style="color: #0078D4;">Us</span>
+                            </h2>
                             <p>
-                                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                                in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-                                are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-                                the middle of text.
+                            The IEEE SIGHT (Special Interest Group on Humanitarian Technology) Society at GEC Wayanad is committed to leveraging technology for social good. Our society focuses on applying engineering and technology solutions to address local and global humanitarian challenges. We engage in projects that aim to improve the quality of life for underserved communities through innovative and sustainable technological solutions. Through workshops, fieldwork, and collaborations with non-profits and community organizations, members gain hands-on experience in using technology to make a positive impact.
                             </p>
-                            <p>
+                            <!-- <p>
                                 Molestiae odio earum non qui cumque provident voluptates, repellendus exercitationem, possimus at iste corrupti officiis unde alias eius ducimus reiciendis soluta eveniet. Nobis ullam ab omnis quasi expedita.
-                            </p>
+                            </p> -->
                         </div>
                     </div>
                 </div>

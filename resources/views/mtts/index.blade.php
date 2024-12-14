@@ -22,34 +22,50 @@
 
   </section><!-- /Hero Section -->
   <div id="about_section">
-    <section class="about_section">
-      <div class="container">
-        <div class="row align-items-center">
-          <!-- Left Side: Image -->
-          <div class="col-md-6 col-12 mb-4 mb-md-0">
-            <div class="img-box text-center">
-              <img src="{{ asset('/assets/images/mtts_logo.png') }}" alt="CSGECW Logo" class="img-fluid custom-logo">
-            </div>
+  <section class="about_section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Side: Image -->
+        <div class="col-md-6 mb-4 mb-md-0 text-center">
+          <div class="img-box">
+            <img src="{{ asset('/assets/images/mtts_logo.png') }}" alt="MTT-S Logo" class="img-fluid custom-logo" >
           </div>
-          <!-- Right Side: About Us Text -->
-          <div class="col-md-6 col-12">
-            <div class="detail-box">
-              <h2>About <span>Us</span></h2>
-              <p>
-                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-                are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-                the middle of text.
-              </p>
-              <p>
-                Molestiae odio earum non qui cumque provident voluptates, repellendus exercitationem, possimus at iste corrupti officiis unde alias eius ducimus reiciendis soluta eveniet. Nobis ullam ab omnis quasi expedita.
-              </p>
+        </div>
+        <!-- Right Side: About Us Text -->
+        <div class="col-md-6">
+          <div class="detail-box">
+            <h2 class="mb-3">
+              About <span style="color: #0078D4;">Us</span>
+            </h2>
+            <p style="text-align: justify; font-size: 1rem; line-height: 1.8;">
+              IEEE MTT-S is a translational society promoting microwave theory and its applications, 
+              from RF, microwave, mmWave to terahertz frequencies. The IEEE Microwave Theory and Technology Society 
+              (MTT-S) GECW provides access to current information, opportunities to network with peers, 
+              and enhancement of the global value of your profession. We create stunning feedback to generate new impacts 
+              in professional development, conferences, mentorship, marketing, and technical workshops.
+            </p>
+            <!-- Latest Achievements -->
+            <div class="achievements mt-4">
+              <h4 class="mb-3">Latest Achievements</h4>
+              <ul class="list-unstyled pl-2" style="font-size: 0.95rem;">
+                <li class="mb-2">🌟 STEM Project: TV Installation at Valad GHSS</li>
+                <li class="mb-2">🌟 Field Visit to CUSAT</li>
+                <li class="mb-2">🌟 Talk Session: Electromagnetic Selective Structures</li>
+                <li class="mb-2">🌟 AI in Wireless Communication: A New Horizon</li>
+                <li class="mb-2">🌟 Inauguration of IEEE APS & MTTS Student Branch Chapter</li>
+                <li class="mb-2">🌟 Practical Applications of Electromagnetic Waves in Daily Life</li>
+                <li class="mb-2">🌟 Multiple Antennas in Terminal Devices: A Revolutionary Approach</li>
+                <li class="mb-2">🌟 Visit to ADAM: Exploring New Dimensions in Technology</li>
+                <li>🌟 LPSC Visit: Witnessing Space Exploration Advancements</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
+</div>
+
 
   <!-- end about section -->
 

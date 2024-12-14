@@ -35,16 +35,15 @@
           <!-- Right Side: About Us Text -->
           <div class="col-md-6 col-12">
             <div class="detail-box">
-              <h2>About <span>Us</span></h2>
+            <h2 class="mb-3">
+              About <span style="color: #0078D4;">Us</span>
+            </h2>
               <p>
-                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-                are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-                the middle of text.
+              The Computer Society of GEC Wayanad is a vibrant community dedicated to fostering interest and excellence in computer science and technology. We provide a platform for students to explore the latest trends in technology, enhance their programming skills, and collaborate on innovative projects. Through workshops, coding competitions, guest lectures, and hackathons, we aim to cultivate a culture of learning and innovation. Whether you're a beginner or an experienced programmer, the Computer Society provides a supportive environment to explore your interests, network with peers, and prepare for a successful career in technology.
               </p>
-              <p>
+              <!-- <p>
                 Molestiae odio earum non qui cumque provident voluptates, repellendus exercitationem, possimus at iste corrupti officiis unde alias eius ducimus reiciendis soluta eveniet. Nobis ullam ab omnis quasi expedita.
-              </p>
+              </p> -->
             </div>
           </div>
         </div>
