@@ -5,7 +5,7 @@
     <!-- {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script> --}} -->
 
-    <div class="m-5 pt-5">
+    <div class="m-3 pt-5">
         <h1 class="pt-5">Events</h1>
         <hr>
         <div class="pt-3"></div>
