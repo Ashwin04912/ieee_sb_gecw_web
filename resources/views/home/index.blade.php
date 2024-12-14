@@ -30,30 +30,61 @@
 
 
 <div class="container mt-5 about_us" tabindex="0">
-
-    <div class="row">
-        <div class="col-md-6  ">
-            <div class="order-2 order-lg-2  content aos-init aos-animate" data-aos="fade-right" data-aos-delay="100">
-                <h3>About IEEE SB GECW.</h3>
-                <p class="fst-italic">IEEE Student Branch GEC Wayanad through unexplored territory, offering a stunning outlook and dedication to excellence build up the achivements , regional opportunities ,conferences, programs …
-                    IEEE SB creates the professional innovation in technical fields .
-                    As a outlook student branch offers ways to connect and collaborate in tech era to patchup the innovation, inspiration and interaction .</p>
-                <ul>
-
-
-                    <li><i class=""></i>Recieved outstanding student branch award 2023(Malabar hub)</li>
-                    <li><i class=""></i>IEEE Regional exemplary student branch award 2022</li>
-                    <li><i class=""></i>IEEE Malabar subsection Most vibrant IEEE student branch award 2022</li>
-                    <li><i class=""></i> 2<sup>nd</sup> Darrel Chong Award 2022 -For Sight Camp</li>
-                    <li><i class=""></i> 2<sup>nd</sup> Inspiring IEEE SIGHT Branch Award for the year 2023</li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-md-6 "><img
-                src="https://images.pexels.com/photos/2422290/pexels-photo-2422290.jpeg?cs=srgb&dl=pexels-jopwell-2422290.jpg&fm=jpg"
-                class="img-fluid" alt="..."></div>
+  <div class="row align-items-center">
+    <!-- Left Content Section -->
+    <div class="col-md-6 order-2 order-md-1">
+      <div class="content aos-init aos-animate" data-aos="fade-right" data-aos-delay="100">
+        <h3 class="mb-4" style="color: #0078D4; font-weight: bold; font-size: 1.8rem;">
+          About IEEE SB GECW
+        </h3>
+        <p class="fst-italic" style="text-align: justify; line-height: 1.8; font-size: 1rem; color: #555;">
+          IEEE Student Branch GEC Wayanad explores unexplored territories, offering a stunning outlook and dedication 
+          to excellence. We aim to build achievements, regional opportunities, conferences, and programs. 
+          IEEE SB creates professional innovation in technical fields and offers ways to connect and collaborate 
+          in the tech era, patching together innovation, inspiration, and interaction.
+        </p>
+        <!-- Achievements List -->
+        <ul class="list-unstyled" style="font-size: 1rem; line-height: 2;">
+          <li>
+            <i class="fas fa-award" style="color: #FFD700;"></i> 
+            Received Outstanding Student Branch Award 2023 (Malabar Hub)
+          </li>
+          <li>
+            <i class="fas fa-trophy" style="color: #FFD700;"></i> 
+            IEEE Regional Exemplary Student Branch Award 2022
+          </li>
+          <li>
+            <i class="fas fa-star" style="color: #FFD700;"></i> 
+            IEEE Malabar Subsection Most Vibrant IEEE Student Branch Award 2022
+          </li>
+          <li>
+            <i class="fas fa-medal" style="color: #FFD700;"></i> 
+            2<sup>nd</sup> Darrel Chong Award 2022 - For Sight Camp
+          </li>
+          <li>
+            <i class="fas fa-certificate" style="color: #FFD700;"></i> 
+            2<sup>nd</sup> Inspiring IEEE SIGHT Branch Award for the year 2023
+          </li>
+        </ul>
+      </div>
     </div>
+    <!-- Right Image Section -->
+    <div class="col-md-6 order-1 order-md-2 mb-4 mb-md-0">
+      <div class="img-box text-center">
+        <img 
+          src="https://images.pexels.com/photos/2422290/pexels-photo-2422290.jpeg?cs=srgb&dl=pexels-jopwell-2422290.jpg&fm=jpg" 
+          class="img-fluid rounded shadow-lg" 
+          alt="IEEE SB GECW Team" 
+          style="max-width: 100%; height: auto;"
+        >
+      </div>
+    </div>
+  </div>
 </div>
+
+<!-- Add FontAwesome for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 
 <div class="container">
     <div class="row justify-content-center">
