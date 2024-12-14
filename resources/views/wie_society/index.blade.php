@@ -34,16 +34,17 @@
           <!-- Right Side: About Us Text -->
           <div class="col-md-6 col-12">
             <div class="detail-box">
-              <h2>About <span>Us</span></h2>
+            <h2 class="mb-3">
+              About <span style="color: #0078D4;">Us</span>
+            </h2>
               <p>
-                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-                are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-                the middle of text.
+                IEEE WIE AG GECW is an affinity group under the IEEE Student Branch at Government Engineering College Wayanad, dedicated to empowering women in engineering and technology. Its mission is to provide a supportive community and resources to female students, increasing their technical knowledge and confidence to succeed in their engineering careers. By offering a network of like-minded women, access to tools and mentorship, and opportunities for growth, IEEE WIE AG GECW aims to make a positive impact on the lives of its members, helping them to achieve their full potential and become leaders in their fields.
+                WIE stands as a prominent global organization committed to championing women researchers and inspiring young women worldwide to embarking on carrers in engineering
+                IEEE WIE AG GECW provides graduate students with exceptional project opportunities, enabling them to gain hands-on experience and a realistic perspective on the careers they're building. By working on real-world projects in a supportive environment, members can develop practical skills, build confidence, and shine in their future endeavors.
               </p>
-              <p>
+              <!-- <p>
                 Molestiae odio earum non qui cumque provident voluptates, repellendus exercitationem, possimus at iste corrupti officiis unde alias eius ducimus reiciendis soluta eveniet. Nobis ullam ab omnis quasi expedita.
-              </p>
+              </p> -->
             </div>
           </div>
         </div>
@@ -60,7 +61,7 @@
       <hr>
       <div class="row justify-content-center pt-3">
         @foreach ($datas as $data)
-        <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center mb-4">
+        <div class="col-lg-4 col-md-4 col-sm-6 d-flex justify-content-center mb-4">
           <div class="profile-card text-center">
             <img src="{{ asset('uploads/images/wieexecoms/' . $data->image) }}" alt="Profile Image"
               class="img-fluid">

@@ -37,16 +37,14 @@
           <!-- Right Side: About Us Text -->
           <div class="col-md-6 col-12">
             <div class="detail-box">
-              <h2>About <span>Us</span></h2>
+            <h2 class="mb-3">
+              About <span style="color: #0078D4;">Us</span>
+            </h2>
               <p>
-                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-                are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-                the middle of text.
-              </p>
-              <p>
+              The IEEE Antennas and Propagation Society (APS) GEC Wayanad is dedicated to advancing the study and application of antennas, electromagnetic wave propagation, and related fields. As a chapter of the global IEEE APS, we provide a platform for students to engage with cutting-edge research, industry trends, and practical applications in these areas. Our society organizes technical seminars, workshops, Field visit and collaborative projects, offering members the opportunity to deepen their knowledge and connect with professionals in the field. Whether you’re interested in antenna design, wireless communication, or electromagnetic theory, the IEEE APS Society is your gateway to exploring the fascinating world of electromagnetics and its real-world impact.
+              <!-- <p>
                 Molestiae odio earum non qui cumque provident voluptates, repellendus exercitationem, possimus at iste corrupti officiis unde alias eius ducimus reiciendis soluta eveniet. Nobis ullam ab omnis quasi expedita.
-              </p>
+              </p> -->
             </div>
           </div>
         </div>
@@ -63,7 +61,7 @@
       <hr>
       <div class="row justify-content-center pt-3">
         @foreach ($datas as $data)
-        <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center mb-4">
+        <div class="col-lg-4 col-md-4 col-sm-6 d-flex justify-content-center mb-4">
           <div class="profile-card text-center">
             <img src="{{ asset('uploads/images/apsexecoms/' . $data->image) }}" alt="Profile Image"
               class="img-fluid">
