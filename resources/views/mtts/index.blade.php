@@ -60,7 +60,7 @@
       <hr>
       <div class="row justify-content-center pt-3">
         @foreach ($datas as $data)
-        <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center mb-4">
+        <div class="col-lg-4 col-md-4 col-sm-6 d-flex justify-content-center mb-4">
           <div class="profile-card text-center">
             <img src="{{ asset('uploads/images/mttsexecoms/' . $data->image) }}" alt="Profile Image"
               class="img-fluid">
