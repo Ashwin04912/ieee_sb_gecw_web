@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="m-5 pt-5">
-        <h1 class="pt-5">EXECOM</h2>
+    <h1 class="fw-bold pt-5">Execom</h1>
             <hr>
             <div class="row justify-content-center pt-4">
                 @foreach ($datas as $data)

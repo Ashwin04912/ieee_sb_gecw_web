@@ -56,7 +56,7 @@
     {{-- exicom section --}}
 
     <div class="m-5 pt-5">
-        <h1 class="pt-5">Meet Our Team..</h2>
+        <h1 class="fw-bold pt-5">Meet Our Team..</h2>
             <hr>
             <div class="row justify-content-center pt-3">
                 @foreach ($datas as $data)
