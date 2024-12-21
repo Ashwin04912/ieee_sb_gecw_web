@@ -28,10 +28,10 @@
     <div class="text-center mb-4">
       <i class="fas fa-bullhorn fa-3x text-primary" style="animation: fadeInUp 1s ease;"></i>
     </div>
-    <h2 class="text-center text-dark" style="font-size: 2.5rem; font-weight: bold; letter-spacing: 1px; animation: fadeInUp 1s ease;">
+    <h2 class="text-center text-dark" style="font-size: 1.8rem; font-weight: bold; letter-spacing: 1px; animation: fadeInUp 1s ease;">
       Our Mission
     </h2>
-    <p class="text-dark text-center" style="font-size: 1.2rem; line-height: 1.6; animation: fadeInUp 1.2s ease;">
+    <p class="text-dark text-center" style="line-height: 1.8; font-size: 1.1rem; animation: fadeInUp 1.2s ease;">
       Our mission is to create a collaborative platform that empowers students to innovate and build meaningful connections with peers, faculty, and industry leaders.
     </p>
   </div>
@@ -41,10 +41,10 @@
     <div class="text-center mb-4">
       <i class="fas fa-eye fa-3x text-primary" style="animation: fadeInUp 1s ease;"></i>
     </div>
-    <h2 class="text-center text-dark" style="font-size: 2.5rem; font-weight: bold; letter-spacing: 1px; animation: fadeInUp 1s ease;">
+    <h2 class="text-center text-dark" style="font-size: 1.8rem; font-weight: bold; letter-spacing: 1px; animation: fadeInUp 1s ease;">
       Our Vision
     </h2>
-    <p class="text-dark text-center" style="font-size: 1.2rem; line-height: 1.6; animation: fadeInUp 1.2s ease;">
+    <p class="text-dark text-center" style="line-height: 1.8; font-size: 1.1rem;animation: fadeInUp 1.2s ease;">
       Our vision is to inspire innovation and leadership by fostering a culture of creativity and collaboration, driving positive change in society.
     </p>
   </div>
@@ -60,7 +60,7 @@
                 <h3 class="mb-4 text-primary" style="font-weight: bold; font-size: 1.8rem; animation: fadeInUp 1s ease;">
                     About IEEE SB GECW
                 </h3>
-                <p class="fst-italic" style="text-align: justify; line-height: 1.8; font-size: 1.1rem; color: #555; animation: fadeInUp 1.2s ease;">
+                <p class="" style="text-align: justify; line-height: 1.8; font-size: 1.1rem; color: #555; animation: fadeInUp 1.2s ease;">
                     IEEE Student Branch GEC Wayanad explores unexplored territories, offering a stunning outlook and dedication 
                     to excellence. We aim to build achievements, regional opportunities, conferences, and programs. 
                     IEEE SB creates professional innovation in technical fields and offers ways to connect and collaborate 

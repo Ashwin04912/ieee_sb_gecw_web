@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="m-5 pt-5">
-    <h1 class="fw-bold pt-5">Execom</h1>
+    <div class="container pt-5">
+    <h1 class="fw-bold pt-5">SB Execom</h1>
             <hr>
             <div class="row justify-content-center pt-4">
                 @foreach ($datas as $data)

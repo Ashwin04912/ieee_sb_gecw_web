@@ -48,7 +48,7 @@
       Our vision is to inspire innovation and leadership by fostering a culture of creativity and collaboration, driving positive change in society.
     </p>
   </div>
-</div>
+
 
 <!-- About Section -->
 <div id="about_section">
@@ -86,7 +86,7 @@
             <hr>
             <div class="row justify-content-center pt-3">
                 @foreach ($datas as $data)
-                <div class="col-lg-4 col-md-4 col-sm-6 d-flex justify-content-center mb-4">
+                <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mb-4">
                     <div class="profile-card text-center">
                         <img src="{{ asset('uploads/images/sightexecoms/' . $data->image) }}" alt="Profile Image"
                             class="img-fluid">
@@ -104,6 +104,8 @@
                 @endforeach
             </div>
     </div>
+</div>
+
     @include('layouts.footer')
 
     {{-- /exicom section --}}
