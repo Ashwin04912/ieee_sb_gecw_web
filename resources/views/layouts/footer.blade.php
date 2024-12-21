@@ -3,11 +3,16 @@
         <div class="row">
             <!-- About Section -->
             <div class="col-md-4">
-                <h4 class="text-uppercase mb-4"><i class="bi bi-info-circle-fill me-2"></i>About Us</h4>
-                <p>
+                <h4 class="text-uppercase mb-4 d-flex align-items-center">
+                    <i class="bi bi-info-circle-fill me-2"></i>About Us
+                </h4>
+                <p class="text-justify" style="line-height: 1.6;">
                     IEEE Student Branch GEC Wayanad is committed to excellence, focusing on achievements, regional opportunities, and innovative programs. We foster collaboration and innovation in technical fields, connecting and inspiring the tech community.
                 </p>
             </div>
+
+
+
 
             <!-- Navigation Links -->
             <div class="col-md-4">
@@ -38,7 +43,7 @@
         <hr class="bg-light mt-4">
         <div class="row">
             <div class="d-flex justify-content-center align-items-center">
-                <p class="m-0 fs-6 text-white">Made with <i class="bi bi-suit-heart-fill text-danger"></i> by Ashwin</p>
+                <p class="m-0 fs-6 text-white">Made with <i class="bi bi-suit-heart-fill text-white"></i> by Ashwin</p>
             </div>
             <p class="m-0 fs-6 text-muted">&copy; {{ date('Y') }} Ashwin. All rights reserved.</p>
         </div>
@@ -75,7 +80,8 @@
 
     /* Heart icon styling */
     .bi-suit-heart-fill {
-        color: red; /* Set color of the heart */
+        color: white;
+        /* Set color of the heart */
         animation: heart-beat 1.5s infinite;
     }
 
@@ -83,9 +89,11 @@
         0% {
             transform: scale(1);
         }
+
         50% {
             transform: scale(1.2);
         }
+
         100% {
             transform: scale(1);
         }

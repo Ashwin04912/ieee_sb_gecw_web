@@ -6,7 +6,7 @@
 <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section">
+    <section id="hero" class="hero section" style="height: 100vh; display: flex; justify-content: center; align-items: center;">
         <div class="hero-bg">
             <img src="{{ asset('assets/images/hero-bg-light.webp') }}" alt="">
         </div>
@@ -15,41 +15,67 @@
                 <h1 data-aos="fade-up">Welcome to <span>IEEE SIGHT</span></h1>
                 <p data-aos="fade-up" data-aos-delay="100">Innovating the Future, Empowering the World.<br></p>
                 <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-                    <a href="#about_section" class="btn-get-started">Get Started</a>
-                </div>
+          <a href="javascript:void(0);" class="btn-get-started" onclick="scrollToSection('about_section')">Get Started</a>
+        </div>
             </div>
         </div>
 
     </section><!-- /Hero Section -->
-    <div id="about_section">
-        <section class="about_section">
-            <div class="container">
-                <div class="row align-items-center">
-                    <!-- Left Side: Image -->
-                    <div class="col-md-6 col-12 mb-4 mb-md-0">
-                        <div class="img-box text-center">
-                            <img src="{{ asset('/assets/images/sight_logo.png') }}" alt="CSGECW Logo" class="img-fluid custom-logo">
 
-                        </div>
-                    </div>
-                    <!-- Right Side: About Us Text -->
-                    <div class="col-md-6 col-12">
-                        <div class="detail-box">
-                            <h2 class="mb-3">
-                                About <span style="color: #0078D4;">Us</span>
-                            </h2>
-                            <p>
-                            The IEEE SIGHT (Special Interest Group on Humanitarian Technology) Society at GEC Wayanad is committed to leveraging technology for social good. Our society focuses on applying engineering and technology solutions to address local and global humanitarian challenges. We engage in projects that aim to improve the quality of life for underserved communities through innovative and sustainable technological solutions. Through workshops, fieldwork, and collaborations with non-profits and community organizations, members gain hands-on experience in using technology to make a positive impact.
-                            </p>
-                            <!-- <p>
-                                Molestiae odio earum non qui cumque provident voluptates, repellendus exercitationem, possimus at iste corrupti officiis unde alias eius ducimus reiciendis soluta eveniet. Nobis ullam ab omnis quasi expedita.
-                            </p> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="container mt-5 d-flex flex-wrap justify-content-center gap-4">
+  <!-- Mission Box -->
+  <div class="mission-box p-4 shadow-lg rounded-3 col-12 col-md-5" style="background: #f9f9f9; transition: transform 0.3s ease;" data-aos="fade-up" data-aos-delay="100">
+    <div class="text-center mb-4">
+      <i class="fas fa-bullhorn fa-3x text-primary" style="animation: fadeInUp 1s ease;"></i>
     </div>
+    <h2 class="text-center text-dark" style="font-size: 2.5rem; font-weight: bold; letter-spacing: 1px; animation: fadeInUp 1s ease;">
+      Our Mission
+    </h2>
+    <p class="text-dark text-center" style="font-size: 1.2rem; line-height: 1.6; animation: fadeInUp 1.2s ease;">
+      Our mission is to create a collaborative platform that empowers students to innovate and build meaningful connections with peers, faculty, and industry leaders.
+    </p>
+  </div>
+
+  <!-- Vision Box -->
+  <div class="vision-box p-4 shadow-lg rounded-3 col-12 col-md-5" style="background: #f9f9f9; transition: transform 0.3s ease;" data-aos="fade-up" data-aos-delay="200">
+    <div class="text-center mb-4">
+      <i class="fas fa-eye fa-3x text-primary" style="animation: fadeInUp 1s ease;"></i>
+    </div>
+    <h2 class="text-center text-dark" style="font-size: 2.5rem; font-weight: bold; letter-spacing: 1px; animation: fadeInUp 1s ease;">
+      Our Vision
+    </h2>
+    <p class="text-dark text-center" style="font-size: 1.2rem; line-height: 1.6; animation: fadeInUp 1.2s ease;">
+      Our vision is to inspire innovation and leadership by fostering a culture of creativity and collaboration, driving positive change in society.
+    </p>
+  </div>
+</div>
+
+<!-- About Section -->
+<div id="about_section">
+  <section class="about_section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Side: Image -->
+        <div class="col-md-6 col-12 mb-4 mb-md-0 text-center">
+          <div class="img-box">
+            <img src="{{ asset('/assets/images/sight_logo.png') }}" alt="CSGECW Logo" class="img-fluid custom-logo" style="animation: fadeInUp 1s ease;">
+          </div>
+        </div>
+        <!-- Right Side: About Us Text -->
+        <div class="col-md-6 col-12">
+          <div class="detail-box">
+          <h2 class="mb-3" style="font-size: 2.5rem; font-weight: bold;">
+                            About <span style="color: #0078D4;">Us</span>
+                        </h2>
+            <p style="text-align: justify; font-size: 1rem; line-height: 1.8; animation: fadeInUp 1.2s ease;">
+              The IEEE SIGHT (Special Interest Group on Humanitarian Technology) Society at GEC Wayanad is committed to leveraging technology for social good. Our society focuses on applying engineering and technology solutions to address local and global humanitarian challenges. We engage in projects that aim to improve the quality of life for underserved communities through innovative and sustainable technological solutions. Through workshops, fieldwork, and collaborations with non-profits and community organizations, members gain hands-on experience in using technology to make a positive impact.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 
     <!-- end about section -->
 
@@ -83,8 +109,13 @@
     {{-- /exicom section --}}
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            AOS.init();
-        });
-    </script>
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init();
+    });
+
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
     @endsection

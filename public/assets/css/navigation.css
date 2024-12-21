@@ -1,102 +1,200 @@
-.hi {
-    margin-top: -20px !important;
+/* Navbar background color and shadow */
+.navbar {
+    background-color: #333 !important; /* Dark background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure navbar is on top of other elements */
 }
 
-.name{
-    font-size: 20px;
+/* Adjust body or content to avoid overlap with fixed navbar */
+body {
+    padding-top: 60px; /* Adjust according to navbar height */
+}
+
+/* Navbar item spacing and alignment */
+.navbar-nav .nav-item {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Hover effect on navbar links */
+.navbar-nav .nav-link {
+    color: #fff !important; /* White text */
+    font-size: 16px; /* Adjust font size */
+    padding: 10px 15px; /* Add padding for better clickable area */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #ff0000 !important;
-    /* Change this to your desired hover color */
+    color: #ffcc00 !important; /* Yellow color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Slight background color change on hover */
+    border-radius: 4px; /* Rounded corners on hover */
+    transform: scale(1.05); /* Slight scaling effect on hover */
 }
 
-
-
-.navbar-nav .dropdown-menu .dropdown-item:hover {
-    color: #ff0000 !important;
-    /* Change this to your desired hover color */
+/* Underline Animation for Navbar Links */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffcc00;
+    transition: width 0.3s ease;
 }
 
-/* Highlight active navigation item */
+.navbar-nav .nav-link:hover::after {
+    width: 100%; /* Underline expands on hover */
+}
+
+/* Active and selected navigation item */
 .navbar-nav .nav-item.selected .nav-link {
-    color: blue !important;
-    /* Text color for selected item */
+    color: #ffcc00 !important; /* Yellow color for active item */
     font-weight: bold;
     text-decoration: underline;
-
-    /* Make text bold */
 }
-/* Define the selected class */
-.nav-link.selected {
-    color: blue !important; /* Set text color to blue */
-    font-weight: bold; /* Optional: make it bold for better visibility */
-    text-decoration: underline; /* Optional: add an underline effect */
-  }
-  
-  /* Ensure dropdown item styling matches */
-  .dropdown-item.selected {
-    color: blue !important; /* Make the selected dropdown item blue */
-    font-weight: bold; /* Optional */
-  }
-  
+
+/* Styling for dropdown menu */
+.navbar-nav .dropdown-menu {
+    background-color: #444; /* Darker background for dropdown */
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
+}
+
+/* Dropdown item hover effect */
+.navbar-nav .dropdown-menu .dropdown-item {
+    color: #fff !important; /* White text */
+    padding: 10px 20px; /* Add padding for better spacing */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    color: #ffcc00 !important; /* Yellow text on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+}
+
+/* Navbar logo with reduced opacity */
+.im-logo {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.im-logo:hover {
+    opacity: 1; /* Increase opacity on hover for logo */
+}
 
 /* Custom selection color specifically for the navbar */
 .navbar ::selection {
     background-color: #ffcc00;
-    /* Background color of the selection */
-    color: #000000;
-    /* Text color of the selection */
+    color: #000;
 }
 
-.im-logo {
-    opacity: 0.8;
+/* Toggler icon for mobile view */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+/* Smooth scroll for the entire page */
+html {
+    scroll-behavior: smooth;
+}
 
+/* Image container hover effect */
+.image-container:hover {
+    transform: scale(1.09);
+    transition: transform 0.6s ease;
+}
+
+/* Logout button styling */
+.logout-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #0056b3;
+    color: #e0e0e0;
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.logout-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+/* Adjust padding for fluid container */
 .container-fluid {
     padding-left: 0px !important;
     padding-right: 0px !important;
     margin-top: -16px !important;
 }
 
+/* Smooth transition for scroll */
 .ScrollCss {
     transition: 1s;
     opacity: .8;
 }
 
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+/* Navbar on scroll behavior */
+#navbar {
+    background: transparent;
+    transition: background 0.5s ease;
 }
 
-html {
-    scroll-behavior: smooth;
+#navbar.scrolled {
+    background: black;
+    opacity: 0.9;
 }
 
-.image-container:hover {
-    transform: scale(1.09);
-    transition: transform 0.6s;
+/* Hover effect for navigation links in mobile view */
+.navbar-nav .nav-item {
+    transition: transform 0.3s ease;
 }
 
-/* Add this to your CSS file, e.g., resources/css/navigation.css or a similar file */
-
-.logout-button {
-    background-color: #007bff; /* Primary color */
-    color: white; /* Text color */
-    border: none; /* Remove default border */
-    padding: 10px 20px; /* Padding for better appearance */
-    border-radius: 4px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 16px; /* Adjust font size as needed */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+.navbar-nav .nav-item:hover {
+    transform: scale(1.05); /* Slight scaling effect on hover */
 }
 
-.logout-button:hover {
-    background-color: #0056b3; /* Darker color on hover */
-    color: #e0e0e0; /* Lighter text color on hover */
+/* Dropdown item hover effect */
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    color: #ffcc00 !important; /* Color change for hovered dropdown items */
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-.logout-button:focus {
-    outline: none; /* Remove default focus outline */
-    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Custom focus outline */
+
+/* Make the dropdown appear when hovering over the parent item */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    visibility: visible;
+}
+
+/* Optional: Hide the dropdown by default */
+.dropdown-menu {
+    display: none;
+    visibility: hidden;
+}
+
+
+/* Adjust navbar items on smaller screens */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        font-size: 14px; /* Smaller text on mobile */
+    }
+
+    .navbar-toggler-icon {
+        background-color: #ffcc00; /* Toggler icon color */
+    }
 }
