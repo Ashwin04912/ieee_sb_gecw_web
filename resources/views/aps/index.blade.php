@@ -66,7 +66,7 @@
                         <h2 class="mb-3" style="font-size: 2.5rem; font-weight: bold;">
                             About <span style="color: #0078D4;">Us</span>
                         </h2>
-                        <p style="font-size: 1.1rem; line-height: 1.8; color: #555;">
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: #555;  text-align: justify;">
                             The IEEE Antennas and Propagation Society (APS) GEC Wayanad is dedicated to advancing the study and application of antennas, electromagnetic wave propagation, and related fields. As a chapter of the global IEEE APS, we provide a platform for students to engage with cutting-edge research, industry trends, and practical applications in these areas. Our society organizes technical seminars, workshops, field visits, and collaborative projects, offering members the opportunity to deepen their knowledge and connect with professionals in the field. Whether you’re interested in antenna design, wireless communication, or electromagnetic theory, the IEEE APS Society is your gateway to exploring the fascinating world of electromagnetics and its real-world impact.
                         </p>
                     </div>

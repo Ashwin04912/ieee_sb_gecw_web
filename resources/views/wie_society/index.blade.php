@@ -65,7 +65,7 @@
                         <h2 class="mb-3" style="font-size: 2.5rem; font-weight: bold;">
                             About <span style="color: #0078D4;">Us</span>
                         </h2>
-                        <p style="font-size: 1.2rem; line-height: 1.8; color: #555;">
+                        <p style="font-size: 1.2rem; line-height: 1.8; color: #555; text-align: justify;">
                         IEEE WIE AG GECW is an affinity group under the IEEE Student Branch at Government Engineering College Wayanad, focused on empowering women in engineering and technology. It provides a supportive community for female students, enhancing their technical knowledge and confidence. Through networking, mentorship, and growth opportunities, the group aims to help members achieve their potential and become leaders in their fields. WIE also promotes women researchers globally and encourages young women to pursue careers in engineering. The group offers hands-on project opportunities, helping members gain practical skills and confidence for their future careers.</p>
                     </div>
                 </div>
