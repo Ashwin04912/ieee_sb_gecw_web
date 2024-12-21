@@ -47,9 +47,8 @@
             Our vision is to inspire innovation and leadership by fostering a culture of creativity and collaboration, driving positive change in society.
         </p>
     </div>
-</div>
 
-<!-- About Us Section -->
+    <!-- About Us Section -->
 <div id="about_section" class="pt-5 mt-5">
     <section class="">
         <div class="container">
@@ -132,6 +131,9 @@
       @endforeach
     </div>
   </div>
+</div>
+
+
 
   @include('layouts.footer')
 

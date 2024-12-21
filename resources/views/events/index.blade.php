@@ -1,17 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="entire mt-5 pt-5">
-        <style>
-            .entire{
-                margin-left: 30px;
-                margin-right: 30px;
-            }
-        </style>
+    <div class="container  entire mt-5 pt-5">
+       
       
         <h1 class="fw-bold pt-5">Events</h1>
         <hr>
-        <div class="row justify-content-center pt-4">
+        <div class="row pt-4">
             @foreach ($datas as $data)
                 <div class="card mb-5 border-0 shadow-sm rounded-3">
                     <div class="row g-0 align-items-center">
