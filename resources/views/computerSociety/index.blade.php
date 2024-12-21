@@ -65,7 +65,7 @@
                         <h2 class="mb-3" style="font-size: 2.5rem; font-weight: bold;">
                             About <span style="color: #0078D4;">Us</span>
                         </h2>
-                        <p style="font-size: 1.2rem; line-height: 1.8; color: #555;">
+                        <p  style=" font-size: 1.2rem; line-height: 1.8; color: #555; text-align: justify;">
                             The Computer Society of GEC Wayanad is a vibrant community dedicated to fostering interest and excellence in computer science and technology. We provide a platform for students to explore the latest trends in technology, enhance their programming skills, and collaborate on innovative projects. Through workshops, coding competitions, guest lectures, and hackathons, we aim to cultivate a culture of learning and innovation. Whether you're a beginner or an experienced programmer, the Computer Society provides a supportive environment to explore your interests, network with peers, and prepare for a successful career in technology.
                         </p>
                     </div>
