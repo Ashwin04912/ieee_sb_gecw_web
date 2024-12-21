@@ -67,9 +67,7 @@
                             About <span style="color: #0078D4;">Us</span>
                         </h2>
                         <p style="font-size: 1.2rem; line-height: 1.8; color: #555;">
-                            IEEE WIE AG GECW is an affinity group under the IEEE Student Branch at Government Engineering College Wayanad, dedicated to empowering women in engineering and technology. Its mission is to provide a supportive community and resources to female students, increasing their technical knowledge and confidence to succeed in their engineering careers. By offering a network of like-minded women, access to tools and mentorship, and opportunities for growth, IEEE WIE AG GECW aims to make a positive impact on the lives of its members, helping them to achieve their full potential and become leaders in their fields. 
-                            WIE stands as a prominent global organization committed to championing women researchers and inspiring young women worldwide to embark on careers in engineering. IEEE WIE AG GECW provides graduate students with exceptional project opportunities, enabling them to gain hands-on experience and a realistic perspective on the careers they're building. By working on real-world projects in a supportive environment, members can develop practical skills, build confidence, and shine in their future endeavors.
-                        </p>
+                        IEEE WIE AG GECW is an affinity group under the IEEE Student Branch at Government Engineering College Wayanad, focused on empowering women in engineering and technology. It provides a supportive community for female students, enhancing their technical knowledge and confidence. Through networking, mentorship, and growth opportunities, the group aims to help members achieve their potential and become leaders in their fields. WIE also promotes women researchers globally and encourages young women to pursue careers in engineering. The group offers hands-on project opportunities, helping members gain practical skills and confidence for their future careers.</p>
                     </div>
                 </div>
             </div>
