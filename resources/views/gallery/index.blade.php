@@ -30,6 +30,7 @@
     </div>
 </div>
 
+<script src="{{asset('assets/js/gallery.js')}}"></script>
 @include('layouts.footer')
 
 @endsection

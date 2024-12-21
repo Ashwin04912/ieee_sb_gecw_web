@@ -72,13 +72,9 @@
                             <a class="nav-link text-light" onclick="$('.about_us')[0].focus()" href="#">About
                                 Us</a>
                         </li> -->
-
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-light d-flex align-items-center {{ in_array(Route::currentRouteName(), ['computer', 'wie.index', 'aps.index', 'mtts.index', 'sight.index']) ? 'selected' : '' }}"
-                                href="#"
-                                data-bs-toggle="dropdown"
-                                role="button"
-                                aria-expanded="false">
+                                href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false">
                                 <span class="name">Societies</span>
                             </a>
                             <ul class="dropdown-menu">
@@ -89,8 +85,6 @@
                                 <li><a class="dropdown-item {{ Route::currentRouteName() == 'sight.index' ? 'selected' : '' }}" href="{{route('sight.index')}}">Sight</a></li>
                             </ul>
                         </li>
-
-
                         <li class="nav-item {{ Route::currentRouteName() == 'events.index' ? 'selected' : '' }}">
                             <a class="nav-link text-light" href="{{ route('events.index') }}"><span class="name">Events</span></a>
                         </li>
