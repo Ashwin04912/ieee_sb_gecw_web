@@ -5,6 +5,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AchieveController;
 use App\Http\Controllers\ApsController;
 use App\Http\Controllers\ComputerController;
+use App\Http\Controllers\EventProposalController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\ExecomController;
 use App\Http\Controllers\GalleryController;
@@ -12,7 +13,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MttsController;
 use App\Http\Controllers\SightController;
 use App\Http\Controllers\WieController;
-
+use App\Mail\EventProposalMail;
+use Illuminate\Support\Facades\Mail;
 
 // Admin page routes
 Route::get('/admin', function () {
@@ -110,12 +112,21 @@ Route::get('/achievements', [AchieveController::class, 'index'])->name('achievem
 Route::get('/execom', [ExecomController::class, 'index'])->name('execom.index');
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
 // societies
-Route::get('/computer', [ComputerController::class, 'index'])->name('computer');
+Route::get('/computer', [ComputerController::class, 'index'])->name('computer.index');
 Route::get('/wie', [WieController::class, 'index'])->name('wie.index');
 Route::get('/sight', [SightController::class, 'index'])->name('sight.index');
 Route::get('/aps', [ApsController::class, 'index'])->name('aps.index');
 Route::get('/mtts', [MttsController::class, 'index'])->name('mtts.index');
 // societies end
+
+//event_propasal
+Route::get('/event-proposal', [EventProposalController::class, 'index'])->name('eventProposal.index');
+Route::post('/event-sentmail', [EventProposalController::class, 'sentMail'])->name('eventProposal.sentmail');
+
+
+
+
+
 
 
 require __DIR__ . '/auth.php';

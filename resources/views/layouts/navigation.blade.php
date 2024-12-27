@@ -73,12 +73,12 @@
                                 Us</a>
                         </li> -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light d-flex align-items-center {{ in_array(Route::currentRouteName(), ['computer', 'wie.index', 'aps.index', 'mtts.index', 'sight.index']) ? 'selected' : '' }}"
+                            <a class="nav-link dropdown-toggle text-light d-flex align-items-center {{ in_array(Route::currentRouteName(), ['computer.index', 'wie.index', 'aps.index', 'mtts.index', 'sight.index']) ? 'selected' : '' }}"
                                 href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false">
                                 <span class="name">Societies</span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item {{ Route::currentRouteName() == 'computer' ? 'selected' : '' }}" href="{{route('computer')}}">Computer Society</a></li>
+                                <li><a class="dropdown-item {{ Route::currentRouteName() == 'computer.index' ? 'selected' : '' }}" href="{{route('computer.index')}}">Computer Society</a></li>
                                 <li><a class="dropdown-item {{ Route::currentRouteName() == 'wie.index' ? 'selected' : '' }}" href="{{route('wie.index')}}">Women In Engineering</a></li>
                                 <li><a class="dropdown-item {{ Route::currentRouteName() == 'aps.index' ? 'selected' : '' }}" href="{{route('aps.index')}}">Antennas and Propagation Society</a></li>
                                 <li><a class="dropdown-item {{ Route::currentRouteName() == 'mtts.index' ? 'selected' : '' }}" href="{{route('mtts.index')}}">Microwave Theory and Technology Society</a></li>
