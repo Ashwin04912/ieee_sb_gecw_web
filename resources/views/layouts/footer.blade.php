@@ -2,19 +2,14 @@
     <div class="container">
         <div class="row">
             <!-- About Section -->
-            <div class="col-md-4 ">
+            <div class="col-md-4">
                 <h4 class="text-uppercase mb-4 d-flex align-items-center">
                     <i class="bi bi-info-circle-fill me-2"></i>About Us
                 </h4>
                 <p style="font-size: 16px; font-weight: 400; line-height: 1.6; text-align: justify; letter-spacing: 0.8px; margin: 0;">
     IEEE Student Branch GEC Wayanad is committed to excellence, focusing on achievements, regional opportunities, and innovative programs. We foster collaboration and innovation in technical fields, connecting and inspiring the tech community.
-</p>
-
-
+                </p>
             </div>
-
-
-
 
             <!-- Navigation Links -->
             <div class="col-md-4">
@@ -44,13 +39,16 @@
         </div>
         <hr class="bg-light mt-4">
         <div class="row">
-            <div class="d-flex justify-content-center align-items-center">
-                <p class="m-0 fs-6 text-white">Made with <i class="bi bi-suit-heart-fill text-white"></i> by Ashwin</p>
+            <div class="d-flex flex-column align-items-center">
+            <p class="m-0 fs-6 text-white">Made with <i class="bi bi-suit-heart-fill text-white"></i> by Ashwin</p>
+                <p class="m-0 fs-6 text-white">&copy; {{ date('Y') }} IEEE SB GEC Wayanad. All rights reserved.</p>
+                
+                <!-- <p class="m-0 fs-6 text-white">&copy; {{ date('Y') }} Ashwin. All rights reserved.</p> -->
             </div>
-            <p class="m-0 fs-6 text-muted">&copy; {{ date('Y') }} Ashwin. All rights reserved.</p>
         </div>
     </div>
 </footer>
+
 
 <style>
     footer {
