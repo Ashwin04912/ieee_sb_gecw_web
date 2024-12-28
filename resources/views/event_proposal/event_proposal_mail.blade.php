@@ -19,9 +19,9 @@
         <li><strong>Name:</strong> {{ $data['name'] }}</li>
         <li><strong>Email:</strong> {{ $data['email'] }}</li>
         <li><strong>Phone:</strong> {{ $data['phone'] }}</li>
-        <li><strong>Event Name:</strong> {{ $data['event_name'] }}</li>
         <li><strong>Event Description:</strong> {{ $data['event_description'] }}</li>
         <li><strong>Expected Audience:</strong> {{ $data['audience'] }}</li>
+        <li><strong>Resource Person:</strong> {{ $data['res_person'] }}</li>
         <li><strong>Expected Audience Count:</strong> {{ $data['audience_count'] }}</li>
         <li><strong>Additional Notes:</strong> {{ $data['notes'] }}</li>
     </ul>

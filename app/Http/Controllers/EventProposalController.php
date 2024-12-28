@@ -6,7 +6,7 @@ use App\Mail\EventProposalMail;
 use App\Mail\ThankYouMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Log; // Import the Log facade
+use Illuminate\Support\Facades\Log;
 
 class EventProposalController extends Controller
 {
@@ -20,36 +20,33 @@ class EventProposalController extends Controller
         try {
             Log::info('Mail method triggered.');
 
-            // Store form data in a variable
-            $formData = $request->all();
-            dd($formData);
+            // Validate the incoming request
+            $validatedData = $request->validate([
+                'name' => 'required|string|max:255',
+                'email' => 'required|email|max:255',
+                'phone' => 'required|string|max:15',
+                // 'event_name' => 'required|string|max:255',
+                'event_description' => 'required|string',
+                'audience' => 'required|string|max:255',
+                'res_person' => 'required|string|max:255',
+                'audience_count' => 'required|integer',
+                'notes' => 'nullable|string',
+            ]);
 
-            // Log the form data to ensure it's being passed correctly
-            Log::info('Form Data: ' . json_encode($formData));
-
-            // Check if the email field is set
-            if (!isset($formData['email'])) {
-                Log::error('Email not provided.');
-                return response()->json([
-                    'success' => false,
-                    'error' => 'Email address is missing from the form.'
-                ]);
-            }
-
-            // Log::info('Sending thank you email to: ' . $formData['email']);
-            // Mail::to($formData['email']) // Ensure this is the correct email
-            //     ->send(new ThankYouMail($formData)); // Send the thank you email
-
+            // Log the validated data for debugging
+            Log::info('Validated Form Data: ' . json_encode($validatedData));
 
             // Send the event proposal email to the chairs
-            Log::info('Sending email to the chairs: achuashwin049@gmail.com');
-            Mail::to('achuashwin049@gmail.com')
-                ->cc('')
-                ->bcc('')
-                ->send(new EventProposalMail($formData));
+            Log::info('Sending email to the chair(s): achuashwin049@gmail.com');
+            Mail::to(['ash_win@ieee.org', 'muhammadramees697@gmail.com'])
+                ->send(new EventProposalMail($validatedData));
+                // Log::info('Mails sent to chair successfully.');
 
             // Send the thank you email to the person who submitted the proposal
-           
+            Log::info('Sending thank you email to: ' . $validatedData['email']);
+            Mail::to($validatedData['email'])
+                ->send(new ThankYouMail($validatedData));
+
             Log::info('Mails sent successfully.');
 
             // Return a JSON response
@@ -60,7 +57,6 @@ class EventProposalController extends Controller
         } catch (\Exception $e) {
             Log::error('Mail sending failed: ' . $e->getMessage());
 
-            // Return a JSON response with an error message
             return response()->json([
                 'success' => false,
                 'error' => 'Failed to send email. Please try again later.'

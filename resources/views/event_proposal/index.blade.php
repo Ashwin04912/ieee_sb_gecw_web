@@ -43,19 +43,19 @@
                     <!-- Name -->
                     <div class="mb-4">
                         <label for="name" class="form-label text-dark" style="font-weight: bold;">Your Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" optional>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
                     </div>
 
                     <!-- Email -->
                     <div class="mb-4">
                         <label for="email" class="form-label text-dark" style="font-weight: bold;">Email Address</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" optional>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
                     </div>
 
                     <!-- Phone Number -->
                     <div class="mb-4">
                         <label for="phone" class="form-label text-dark" style="font-weight: bold;">Phone Number</label>
-                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" optional>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
                     </div>
 
                     <!-- Event Details Section -->
@@ -63,21 +63,21 @@
                     <hr class="my-3">
 
                     <!-- Event Name -->
-                    <div class="mb-4">
+                    <!-- <div class="mb-4">
                         <label for="event-name" class="form-label text-dark" style="font-weight: bold;">Event Name</label>
-                        <input type="text" class="form-control" id="event-name" name="event_name" placeholder="Enter the event name" optional>
-                    </div>
+                        <input type="text" class="form-control" id="event-name" name="event_name" placeholder="Enter the event name" required>
+                    </div> -->
 
                     <!-- Event Description -->
                     <div class="mb-4">
                         <label for="event-description" class="form-label text-dark" style="font-weight: bold;">Event Description</label>
-                        <textarea class="form-control" id="event-description" name="event_description" rows="4" placeholder="Describe your event idea" optional></textarea>
+                        <textarea class="form-control" id="event-description" name="event_description" rows="4" placeholder="Describe your event idea" required></textarea>
                     </div>
 
                     <!-- Expected Audience -->
                     <div class="mb-4">
                         <label for="audience" class="form-label text-dark" style="font-weight: bold;">Expected Audience</label>
-                        <select class="form-select" id="audience" name="audience" optional>
+                        <select class="form-select" id="audience" name="audience" required>
                             <option value="">Select audience type</option>
                             <option value="students">Students</option>
                             <option value="professionals">Faculties</option>
@@ -85,21 +85,32 @@
                         </select>
                     </div>
 
+                     <!-- Resource person -->
+                     <div class="mb-4">
+                        <label for="res_person" class="form-label text-dark" style="font-weight: bold;">Do you have a Resource Person</label>
+                        <select class="form-select" id="res_person" name="res_person" required>
+                            <option value="">Select</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                            <!-- <option value="both">Both</option> -->
+                        </select>
+                    </div>
+
                     <!-- Expected Audience Count -->
                     <div class="mb-4">
                         <label for="budget" class="form-label text-dark" style="font-weight: bold;">Expected Audience Count</label>
-                        <input type="number" class="form-control" id="budget" name="audience_count" placeholder="Expected participants for the event" optional>
+                        <input type="number" class="form-control" id="budget" name="audience_count" placeholder="Expected participants for the event" required>
                     </div>
 
                     <!-- Additional Notes -->
                     <div class="mb-4">
                         <label for="notes" class="form-label text-dark" style="font-weight: bold;">Additional Notes</label>
-                        <textarea class="form-control" id="notes" name="notes" rows="4" placeholder="Any additional details or notes" optional></textarea>
+                        <textarea class="form-control" id="notes" name="notes" rows="4" placeholder="Any additional details or notes" ></textarea>
                     </div>
 
                     <!-- Submit Button -->
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary btn-lg rounded-pill shadow-lg" style="animation: fadeInUp 1.3s ease; padding: 12px 24px;">
+                        <button type="submit" class="btn btn-primary btn-lg rounded-pill shadow-lg" style="animation: fadeInUp 1.3s ease; padding: 12px 24px;" >
                             Submit Event Idea
                         </button>
                     </div>
@@ -127,6 +138,7 @@
 
 
 <script>
+    const eventProposalUrl = "{{ route('eventProposal.sentmail') }}";
     document.addEventListener('DOMContentLoaded', function() {
         const form = document.getElementById('eventForm');
 
@@ -143,13 +155,12 @@
                 document.querySelector('button[type="submit"]').disabled = true;
 
                 // Create a FormData object to send the form data
-                let formData = new FormData(this);
-
-                // Send the form data via Ajax
-                fetch("{{ route('eventProposal.sentmail') }}", {
+                const formData = Object.fromEntries(new FormData(this));
+                fetch(eventProposalUrl, {
                         method: "POST",
-                        body: formData,
+                        body: JSON.stringify(formData),
                         headers: {
+                            "Content-Type": "application/json",
                             "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute('content')
                         }
                     })
