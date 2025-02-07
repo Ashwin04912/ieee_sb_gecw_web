@@ -13,7 +13,7 @@
 
 # IEEE SB GECW Website
 
-This is the official website of IEEE SB GECW, built using Laravel. It serves as a hub for members to stay updated with events, announcements, and resources.
+This is the website of IEEE SB GECW, built using Laravel. It serves as a hub for members to stay updated with events, announcements, and resources.
 
 ## 🚀 Getting Started
 
